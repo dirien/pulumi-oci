@@ -102,6 +102,10 @@ const (
 	waasMod                    = "Waas"                    // Web Application Acceleration and Security
 )
 
+var namespaceMap = map[string]string{
+	"oci": "Oci",
+}
+
 // makeMember manufactures a type token for the package and the given module and type.
 func makeMember(mod string, mem string) tokens.ModuleMember {
 	return tokens.ModuleMember(ociPkg + ":" + mod + ":" + mem)
@@ -1172,6 +1176,7 @@ func Provider() tfbridge.ProviderInfo {
 				"Pulumi":                       "3.*",
 				"System.Collections.Immutable": "1.6.0",
 			},
+			Namespaces: namespaceMap,
 		},
 	}
 
