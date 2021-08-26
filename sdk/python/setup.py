@@ -39,7 +39,7 @@ def readme():
 
 setup(name='pulumi_oci',
       version=VERSION,
-      description="A Pulumi package for creating and managing oci cloud resources.",
+      description="A Pulumi package for creating and managing Oracle Cloud Infrastructure (OCI) cloud resources.",
       long_description=readme(),
       long_description_content_type='text/markdown',
       cmdclass={

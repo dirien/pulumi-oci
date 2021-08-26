@@ -5,3426 +5,2535 @@
 from . import _utilities
 import typing
 # Export this package's modules as members:
-from .analytics_analytics_instance import *
-from .analytics_analytics_instance_private_access_channel import *
-from .analytics_analytics_instance_vanity_url import *
-from .apigateway_api import *
-from .apigateway_certificate import *
-from .apigateway_deployment import *
-from .apigateway_gateway import *
-from .apm_apm_domain import *
-from .apm_synthetics_monitor import *
-from .apm_synthetics_script import *
-from .artifacts_container_configuration import *
-from .artifacts_container_image_signature import *
-from .artifacts_container_repository import *
-from .artifacts_generic_artifact import *
-from .artifacts_repository import *
-from .audit_configuration import *
-from .autoscaling_auto_scaling_configuration import *
-from .bastion_bastion import *
-from .bastion_session import *
-from .bds_auto_scaling_configuration import *
-from .bds_bds_instance import *
-from .blockchain_blockchain_platform import *
-from .blockchain_osn import *
-from .blockchain_peer import *
-from .budget_alert_rule import *
-from .budget_budget import *
-from .cloud_guard_cloud_guard_configuration import *
-from .cloud_guard_data_mask_rule import *
-from .cloud_guard_detector_recipe import *
-from .cloud_guard_managed_list import *
-from .cloud_guard_responder_recipe import *
-from .cloud_guard_target import *
-from .containerengine_cluster import *
-from .containerengine_node_pool import *
-from .core_app_catalog_listing_resource_version_agreement import *
-from .core_app_catalog_subscription import *
-from .core_boot_volume import *
-from .core_boot_volume_backup import *
-from .core_cluster_network import *
-from .core_compute_capacity_reservation import *
-from .core_compute_image_capability_schema import *
-from .core_console_history import *
-from .core_cpe import *
-from .core_cross_connect import *
-from .core_cross_connect_group import *
-from .core_dedicated_vm_host import *
-from .core_default_dhcp_options import *
-from .core_default_route_table import *
-from .core_default_security_list import *
-from .core_dhcp_options import *
-from .core_drg import *
-from .core_drg_attachment import *
-from .core_drg_attachment_management import *
-from .core_drg_attachments_list import *
-from .core_drg_route_distribution import *
-from .core_drg_route_distribution_statement import *
-from .core_drg_route_table import *
-from .core_drg_route_table_route_rule import *
-from .core_image import *
-from .core_instance import *
-from .core_instance_configuration import *
-from .core_instance_console_connection import *
-from .core_instance_pool import *
-from .core_instance_pool_instance import *
-from .core_internet_gateway import *
-from .core_ipsec import *
-from .core_ipsec_connection_tunnel_management import *
-from .core_ipv6 import *
-from .core_listing_resource_version_agreement import *
-from .core_local_peering_gateway import *
-from .core_nat_gateway import *
-from .core_network_security_group import *
-from .core_network_security_group_security_rule import *
-from .core_private_ip import *
-from .core_public_ip import *
-from .core_public_ip_pool import *
-from .core_public_ip_pool_capacity import *
-from .core_remote_peering_connection import *
-from .core_route_table import *
-from .core_route_table_attachment import *
-from .core_security_list import *
-from .core_service_gateway import *
-from .core_shape_management import *
-from .core_subnet import *
-from .core_vcn import *
-from .core_virtual_circuit import *
-from .core_virtual_network import *
-from .core_vlan import *
-from .core_vnic_attachment import *
-from .core_volume import *
-from .core_volume_attachment import *
-from .core_volume_backup import *
-from .core_volume_backup_policy import *
-from .core_volume_backup_policy_assignment import *
-from .core_volume_group import *
-from .core_volume_group_backup import *
-from .data_safe_data_safe_configuration import *
-from .data_safe_data_safe_private_endpoint import *
-from .data_safe_on_prem_connector import *
-from .data_safe_target_database import *
-from .database_autonomous_container_database import *
-from .database_autonomous_container_database_dataguard_association_operation import *
-from .database_autonomous_database import *
-from .database_autonomous_database_backup import *
-from .database_autonomous_database_instance_wallet_management import *
-from .database_autonomous_database_regional_wallet_management import *
-from .database_autonomous_database_wallet import *
-from .database_autonomous_exadata_infrastructure import *
-from .database_autonomous_vm_cluster import *
-from .database_backup import *
-from .database_backup_destination import *
-from .database_cloud_exadata_infrastructure import *
-from .database_cloud_vm_cluster import *
-from .database_data_guard_association import *
-from .database_database import *
-from .database_database_software_image import *
-from .database_database_upgrade import *
-from .database_db_home import *
-from .database_db_node_console_connection import *
-from .database_db_system import *
-from .database_exadata_infrastructure import *
-from .database_exadata_infrastructure_storage import *
-from .database_exadata_iorm_config import *
-from .database_external_container_database import *
-from .database_external_container_database_management import *
-from .database_external_database_connector import *
-from .database_external_non_container_database import *
-from .database_external_non_container_database_management import *
-from .database_external_non_container_database_operations_insights_management import *
-from .database_external_pluggable_database import *
-from .database_external_pluggable_database_management import *
-from .database_external_pluggable_database_operations_insights_management import *
-from .database_key_store import *
-from .database_maintenance_run import *
-from .database_management_managed_database_group import *
-from .database_management_managed_databases_change_database_parameter import *
-from .database_management_managed_databases_reset_database_parameter import *
-from .database_migration import *
-from .database_migration_agent import *
-from .database_migration_connection import *
-from .database_migration_job import *
-from .database_migration_migration import *
-from .database_pluggable_database import *
-from .database_pluggable_databases_local_clone import *
-from .database_pluggable_databases_remote_clone import *
-from .database_vm_cluster import *
-from .database_vm_cluster_network import *
-from .datacatalog_catalog import *
-from .datacatalog_catalog_private_endpoint import *
-from .datacatalog_connection import *
-from .datacatalog_data_asset import *
-from .datacatalog_metastore import *
-from .dataflow_application import *
-from .dataflow_invoke_run import *
-from .dataflow_private_endpoint import *
-from .dataintegration_workspace import *
-from .datascience_model import *
-from .datascience_model_deployment import *
-from .datascience_model_provenance import *
-from .datascience_notebook_session import *
-from .datascience_project import *
-from .devops_deploy_artifact import *
-from .devops_deploy_environment import *
-from .devops_deploy_pipeline import *
-from .devops_deploy_stage import *
-from .devops_deployment import *
-from .devops_project import *
-from .dns_record import *
-from .dns_resolver import *
-from .dns_resolver_endpoint import *
-from .dns_rrset import *
-from .dns_steering_policy import *
-from .dns_steering_policy_attachment import *
-from .dns_tsig_key import *
-from .dns_view import *
-from .dns_zone import *
-from .email_dkim import *
-from .email_email_domain import *
-from .email_sender import *
-from .email_suppression import *
-from .events_rule import *
-from .file_storage_export import *
-from .file_storage_export_set import *
-from .file_storage_file_system import *
-from .file_storage_mount_target import *
-from .file_storage_snapshot import *
-from .functions_application import *
-from .functions_function import *
-from .functions_invoke_function import *
-from .generic_artifacts_content_artifact_by_path import *
-from .get_analytics_analytics_instance import *
-from .get_analytics_analytics_instance_private_access_channel import *
-from .get_analytics_analytics_instances import *
-from .get_apigateway_api import *
-from .get_apigateway_api_content import *
-from .get_apigateway_api_deployment_specification import *
-from .get_apigateway_api_validation import *
-from .get_apigateway_apis import *
-from .get_apigateway_certificate import *
-from .get_apigateway_certificates import *
-from .get_apigateway_deployment import *
-from .get_apigateway_deployments import *
-from .get_apigateway_gateway import *
-from .get_apigateway_gateways import *
-from .get_apm_apm_domain import *
-from .get_apm_apm_domains import *
-from .get_apm_data_keys import *
-from .get_apm_synthetics_monitor import *
-from .get_apm_synthetics_monitors import *
-from .get_apm_synthetics_public_vantage_point import *
-from .get_apm_synthetics_public_vantage_points import *
-from .get_apm_synthetics_result import *
-from .get_apm_synthetics_script import *
-from .get_apm_synthetics_scripts import *
-from .get_artifacts_container_configuration import *
-from .get_artifacts_container_image import *
-from .get_artifacts_container_image_signature import *
-from .get_artifacts_container_image_signatures import *
-from .get_artifacts_container_images import *
-from .get_artifacts_container_repositories import *
-from .get_artifacts_container_repository import *
-from .get_artifacts_generic_artifact import *
-from .get_artifacts_generic_artifacts import *
-from .get_artifacts_repositories import *
-from .get_artifacts_repository import *
-from .get_audit_configuration import *
-from .get_audit_events import *
-from .get_autoscaling_auto_scaling_configuration import *
-from .get_autoscaling_auto_scaling_configurations import *
-from .get_bastion_bastion import *
-from .get_bastion_bastions import *
-from .get_bastion_session import *
-from .get_bastion_sessions import *
-from .get_bds_auto_scaling_configuration import *
-from .get_bds_auto_scaling_configurations import *
-from .get_bds_bds_instance import *
-from .get_bds_bds_instances import *
-from .get_blockchain_blockchain_platform import *
-from .get_blockchain_blockchain_platforms import *
-from .get_blockchain_osn import *
-from .get_blockchain_osns import *
-from .get_blockchain_peer import *
-from .get_blockchain_peers import *
-from .get_budget_alert_rule import *
-from .get_budget_alert_rules import *
-from .get_budget_budget import *
-from .get_budget_budgets import *
-from .get_cloud_guard_cloud_guard_configuration import *
-from .get_cloud_guard_data_mask_rule import *
-from .get_cloud_guard_data_mask_rules import *
-from .get_cloud_guard_detector_recipe import *
-from .get_cloud_guard_detector_recipes import *
-from .get_cloud_guard_managed_list import *
-from .get_cloud_guard_managed_lists import *
-from .get_cloud_guard_responder_recipe import *
-from .get_cloud_guard_responder_recipes import *
-from .get_cloud_guard_target import *
-from .get_cloud_guard_targets import *
-from .get_computeinstanceagent_instance_agent_plugin import *
-from .get_computeinstanceagent_instance_agent_plugins import *
-from .get_computeinstanceagent_instance_available_plugins import *
-from .get_containerengine_cluster_kube_config import *
-from .get_containerengine_cluster_option import *
-from .get_containerengine_clusters import *
-from .get_containerengine_migrate_to_native_vcn_status import *
-from .get_containerengine_node_pool import *
-from .get_containerengine_node_pool_option import *
-from .get_containerengine_node_pools import *
-from .get_containerengine_work_request_errors import *
-from .get_containerengine_work_request_log_entries import *
-from .get_containerengine_work_requests import *
-from .get_core_app_catalog_listing import *
-from .get_core_app_catalog_listing_resource_version import *
-from .get_core_app_catalog_listing_resource_versions import *
-from .get_core_app_catalog_listings import *
-from .get_core_app_catalog_subscriptions import *
-from .get_core_block_volume_replica import *
-from .get_core_block_volume_replicas import *
-from .get_core_boot_volume import *
-from .get_core_boot_volume_attachments import *
-from .get_core_boot_volume_backup import *
-from .get_core_boot_volume_backups import *
-from .get_core_boot_volume_replica import *
-from .get_core_boot_volume_replicas import *
-from .get_core_boot_volumes import *
-from .get_core_byoip_allocated_ranges import *
-from .get_core_byoip_range import *
-from .get_core_byoip_ranges import *
-from .get_core_cluster_network import *
-from .get_core_cluster_network_instances import *
-from .get_core_cluster_networks import *
-from .get_core_compute_capacity_reservation import *
-from .get_core_compute_capacity_reservation_instance_shapes import *
-from .get_core_compute_capacity_reservation_instances import *
-from .get_core_compute_capacity_reservations import *
-from .get_core_compute_global_image_capability_schema import *
-from .get_core_compute_global_image_capability_schemas import *
-from .get_core_compute_global_image_capability_schemas_version import *
-from .get_core_compute_global_image_capability_schemas_versions import *
-from .get_core_compute_image_capability_schema import *
-from .get_core_compute_image_capability_schemas import *
-from .get_core_console_histories import *
-from .get_core_console_history_data import *
-from .get_core_cpe_device_shape import *
-from .get_core_cpe_device_shapes import *
-from .get_core_cpes import *
-from .get_core_cross_connect import *
-from .get_core_cross_connect_group import *
-from .get_core_cross_connect_groups import *
-from .get_core_cross_connect_locations import *
-from .get_core_cross_connect_port_speed_shapes import *
-from .get_core_cross_connect_status import *
-from .get_core_cross_connects import *
-from .get_core_dedicated_vm_host import *
-from .get_core_dedicated_vm_host_instance_shapes import *
-from .get_core_dedicated_vm_host_shapes import *
-from .get_core_dedicated_vm_hosts import *
-from .get_core_dedicated_vm_hosts_instances import *
-from .get_core_dhcp_options import *
-from .get_core_drg_attachments import *
-from .get_core_drg_route_distribution import *
-from .get_core_drg_route_distribution_statements import *
-from .get_core_drg_route_distributions import *
-from .get_core_drg_route_table import *
-from .get_core_drg_route_table_route_rules import *
-from .get_core_drg_route_tables import *
-from .get_core_drgs import *
-from .get_core_fast_connect_provider_service import *
-from .get_core_fast_connect_provider_service_key import *
-from .get_core_fast_connect_provider_services import *
-from .get_core_image import *
-from .get_core_image_shape import *
-from .get_core_image_shapes import *
-from .get_core_images import *
-from .get_core_instance import *
-from .get_core_instance_configuration import *
-from .get_core_instance_configurations import *
-from .get_core_instance_console_connections import *
-from .get_core_instance_credentials import *
-from .get_core_instance_devices import *
-from .get_core_instance_pool import *
-from .get_core_instance_pool_instances import *
-from .get_core_instance_pool_load_balancer_attachment import *
-from .get_core_instance_pools import *
-from .get_core_instances import *
-from .get_core_internet_gateways import *
-from .get_core_ipsec_config import *
-from .get_core_ipsec_connection_tunnel import *
-from .get_core_ipsec_connection_tunnels import *
-from .get_core_ipsec_connections import *
-from .get_core_ipsec_status import *
-from .get_core_ipv6 import *
-from .get_core_ipv6s import *
-from .get_core_letter_of_authority import *
-from .get_core_listing_resource_version import *
-from .get_core_listing_resource_versions import *
-from .get_core_local_peering_gateways import *
-from .get_core_nat_gateway import *
-from .get_core_nat_gateways import *
-from .get_core_network_security_group import *
-from .get_core_network_security_group_security_rules import *
-from .get_core_network_security_group_vnics import *
-from .get_core_network_security_groups import *
-from .get_core_peer_region_for_remote_peerings import *
-from .get_core_private_ip import *
-from .get_core_private_ips import *
-from .get_core_public_ip import *
-from .get_core_public_ip_pool import *
-from .get_core_public_ip_pools import *
-from .get_core_public_ips import *
-from .get_core_remote_peering_connections import *
-from .get_core_route_tables import *
-from .get_core_security_lists import *
-from .get_core_service_gateways import *
-from .get_core_services import *
-from .get_core_shape import *
-from .get_core_shapes import *
-from .get_core_subnet import *
-from .get_core_subnets import *
-from .get_core_vcn import *
-from .get_core_vcn_dns_resolver_association import *
-from .get_core_vcns import *
-from .get_core_virtual_circuit import *
-from .get_core_virtual_circuit_bandwidth_shapes import *
-from .get_core_virtual_circuit_public_prefixes import *
-from .get_core_virtual_circuits import *
-from .get_core_virtual_networks import *
-from .get_core_vlan import *
-from .get_core_vlans import *
-from .get_core_vnic import *
-from .get_core_vnic_attachments import *
-from .get_core_volume import *
-from .get_core_volume_attachments import *
-from .get_core_volume_backup_policies import *
-from .get_core_volume_backup_policy_assignments import *
-from .get_core_volume_backups import *
-from .get_core_volume_group_backups import *
-from .get_core_volume_groups import *
-from .get_core_volumes import *
-from .get_data_safe_data_safe_configuration import *
-from .get_data_safe_data_safe_private_endpoint import *
-from .get_data_safe_data_safe_private_endpoints import *
-from .get_data_safe_on_prem_connector import *
-from .get_data_safe_on_prem_connectors import *
-from .get_data_safe_target_database import *
-from .get_data_safe_target_databases import *
-from .get_database_autonomous_container_database import *
-from .get_database_autonomous_container_database_dataguard_association import *
-from .get_database_autonomous_container_database_dataguard_associations import *
-from .get_database_autonomous_container_databases import *
-from .get_database_autonomous_container_patches import *
-from .get_database_autonomous_database import *
-from .get_database_autonomous_database_backup import *
-from .get_database_autonomous_database_backups import *
-from .get_database_autonomous_database_dataguard_association import *
-from .get_database_autonomous_database_dataguard_associations import *
-from .get_database_autonomous_database_instance_wallet_management import *
-from .get_database_autonomous_database_regional_wallet_management import *
-from .get_database_autonomous_database_wallet import *
-from .get_database_autonomous_databases import *
-from .get_database_autonomous_databases_clones import *
-from .get_database_autonomous_db_preview_versions import *
-from .get_database_autonomous_db_versions import *
-from .get_database_autonomous_exadata_infrastructure import *
-from .get_database_autonomous_exadata_infrastructure_ocpu import *
-from .get_database_autonomous_exadata_infrastructure_shapes import *
-from .get_database_autonomous_exadata_infrastructures import *
-from .get_database_autonomous_patch import *
-from .get_database_autonomous_vm_cluster import *
-from .get_database_autonomous_vm_clusters import *
-from .get_database_backup_destination import *
-from .get_database_backup_destinations import *
-from .get_database_backups import *
-from .get_database_cloud_exadata_infrastructure import *
-from .get_database_cloud_exadata_infrastructures import *
-from .get_database_cloud_vm_cluster import *
-from .get_database_cloud_vm_clusters import *
-from .get_database_data_guard_association import *
-from .get_database_data_guard_associations import *
-from .get_database_database import *
-from .get_database_database_software_image import *
-from .get_database_database_software_images import *
-from .get_database_database_upgrade_history_entries import *
-from .get_database_database_upgrade_history_entry import *
-from .get_database_databases import *
-from .get_database_db_home import *
-from .get_database_db_home_patch_history_entries import *
-from .get_database_db_home_patches import *
-from .get_database_db_homes import *
-from .get_database_db_node import *
-from .get_database_db_node_console_connection import *
-from .get_database_db_node_console_connections import *
-from .get_database_db_nodes import *
-from .get_database_db_system_patch_history_entries import *
-from .get_database_db_system_patches import *
-from .get_database_db_system_shapes import *
-from .get_database_db_systems import *
-from .get_database_db_versions import *
-from .get_database_exadata_infrastructure import *
-from .get_database_exadata_infrastructure_download_config_file import *
-from .get_database_exadata_infrastructures import *
-from .get_database_exadata_iorm_config import *
-from .get_database_external_container_database import *
-from .get_database_external_container_databases import *
-from .get_database_external_database_connector import *
-from .get_database_external_database_connectors import *
-from .get_database_external_non_container_database import *
-from .get_database_external_non_container_databases import *
-from .get_database_external_pluggable_database import *
-from .get_database_external_pluggable_databases import *
-from .get_database_flex_components import *
-from .get_database_gi_versions import *
-from .get_database_key_store import *
-from .get_database_key_stores import *
-from .get_database_maintenance_run import *
-from .get_database_maintenance_runs import *
-from .get_database_management_managed_database import *
-from .get_database_management_managed_database_group import *
-from .get_database_management_managed_database_groups import *
-from .get_database_management_managed_databases import *
-from .get_database_management_managed_databases_database_parameter import *
-from .get_database_management_managed_databases_database_parameters import *
-from .get_database_migration_agent import *
-from .get_database_migration_agent_images import *
-from .get_database_migration_agents import *
-from .get_database_migration_connection import *
-from .get_database_migration_connections import *
-from .get_database_migration_job import *
-from .get_database_migration_jobs import *
-from .get_database_migration_migration import *
-from .get_database_migration_migrations import *
-from .get_database_pluggable_database import *
-from .get_database_pluggable_databases import *
-from .get_database_vm_cluster import *
-from .get_database_vm_cluster_network import *
-from .get_database_vm_cluster_network_download_config_file import *
-from .get_database_vm_cluster_networks import *
-from .get_database_vm_cluster_patch import *
-from .get_database_vm_cluster_patch_history_entries import *
-from .get_database_vm_cluster_patch_history_entry import *
-from .get_database_vm_cluster_patches import *
-from .get_database_vm_cluster_recommended_network import *
-from .get_database_vm_cluster_update import *
-from .get_database_vm_cluster_update_history_entries import *
-from .get_database_vm_cluster_update_history_entry import *
-from .get_database_vm_cluster_updates import *
-from .get_database_vm_clusters import *
-from .get_datacatalog_catalog import *
-from .get_datacatalog_catalog_private_endpoint import *
-from .get_datacatalog_catalog_private_endpoints import *
-from .get_datacatalog_catalog_type import *
-from .get_datacatalog_catalog_types import *
-from .get_datacatalog_catalogs import *
-from .get_datacatalog_connection import *
-from .get_datacatalog_connections import *
-from .get_datacatalog_data_asset import *
-from .get_datacatalog_data_assets import *
-from .get_datacatalog_metastore import *
-from .get_datacatalog_metastores import *
-from .get_dataflow_application import *
-from .get_dataflow_applications import *
-from .get_dataflow_invoke_run import *
-from .get_dataflow_invoke_runs import *
-from .get_dataflow_private_endpoint import *
-from .get_dataflow_private_endpoints import *
-from .get_dataflow_run_log import *
-from .get_dataflow_run_logs import *
-from .get_dataintegration_workspace import *
-from .get_dataintegration_workspaces import *
-from .get_datascience_model import *
-from .get_datascience_model_deployment import *
-from .get_datascience_model_deployment_shapes import *
-from .get_datascience_model_deployments import *
-from .get_datascience_model_provenance import *
-from .get_datascience_models import *
-from .get_datascience_notebook_session import *
-from .get_datascience_notebook_session_shapes import *
-from .get_datascience_notebook_sessions import *
-from .get_datascience_project import *
-from .get_datascience_projects import *
-from .get_devops_deploy_artifact import *
-from .get_devops_deploy_artifacts import *
-from .get_devops_deploy_environment import *
-from .get_devops_deploy_environments import *
-from .get_devops_deploy_pipeline import *
-from .get_devops_deploy_pipelines import *
-from .get_devops_deploy_stage import *
-from .get_devops_deploy_stages import *
-from .get_devops_deployment import *
-from .get_devops_deployments import *
-from .get_devops_project import *
-from .get_devops_projects import *
-from .get_dns_records import *
-from .get_dns_resolver import *
-from .get_dns_resolver_endpoint import *
-from .get_dns_resolver_endpoints import *
-from .get_dns_resolvers import *
-from .get_dns_rrset import *
-from .get_dns_steering_policies import *
-from .get_dns_steering_policy import *
-from .get_dns_steering_policy_attachment import *
-from .get_dns_steering_policy_attachments import *
-from .get_dns_tsig_key import *
-from .get_dns_tsig_keys import *
-from .get_dns_view import *
-from .get_dns_views import *
-from .get_dns_zones import *
-from .get_email_dkim import *
-from .get_email_dkims import *
-from .get_email_email_domain import *
-from .get_email_email_domains import *
-from .get_email_sender import *
-from .get_email_senders import *
-from .get_email_suppression import *
-from .get_email_suppressions import *
-from .get_events_rule import *
-from .get_events_rules import *
-from .get_file_storage_export_sets import *
-from .get_file_storage_exports import *
-from .get_file_storage_file_systems import *
-from .get_file_storage_mount_targets import *
-from .get_file_storage_snapshot import *
-from .get_file_storage_snapshots import *
-from .get_functions_application import *
-from .get_functions_applications import *
-from .get_functions_function import *
-from .get_functions_functions import *
-from .get_generic_artifacts_content_artifact_by_path import *
-from .get_generic_artifacts_content_generic_artifacts_content import *
-from .get_golden_gate_database_registration import *
-from .get_golden_gate_database_registrations import *
-from .get_golden_gate_deployment import *
-from .get_golden_gate_deployment_backup import *
-from .get_golden_gate_deployment_backups import *
-from .get_golden_gate_deployments import *
-from .get_health_checks_http_monitor import *
-from .get_health_checks_http_monitors import *
-from .get_health_checks_http_probe_results import *
-from .get_health_checks_ping_monitor import *
-from .get_health_checks_ping_monitors import *
-from .get_health_checks_ping_probe_results import *
-from .get_health_checks_vantage_points import *
-from .get_identity_api_keys import *
-from .get_identity_auth_tokens import *
-from .get_identity_authentication_policy import *
-from .get_identity_availability_domain import *
-from .get_identity_availability_domains import *
-from .get_identity_compartment import *
-from .get_identity_compartments import *
-from .get_identity_cost_tracking_tags import *
-from .get_identity_customer_secret_keys import *
-from .get_identity_dynamic_groups import *
-from .get_identity_fault_domains import *
-from .get_identity_group import *
-from .get_identity_groups import *
-from .get_identity_identity_provider_groups import *
-from .get_identity_identity_providers import *
-from .get_identity_idp_group_mappings import *
-from .get_identity_network_source import *
-from .get_identity_network_sources import *
-from .get_identity_policies import *
-from .get_identity_region_subscriptions import *
-from .get_identity_regions import *
-from .get_identity_smtp_credentials import *
-from .get_identity_swift_passwords import *
-from .get_identity_tag import *
-from .get_identity_tag_default import *
-from .get_identity_tag_defaults import *
-from .get_identity_tag_namespaces import *
-from .get_identity_tags import *
-from .get_identity_tenancy import *
-from .get_identity_ui_password import *
-from .get_identity_user import *
-from .get_identity_user_group_memberships import *
-from .get_identity_users import *
-from .get_integration_integration_instance import *
-from .get_integration_integration_instances import *
-from .get_jms_fleet import *
-from .get_jms_fleets import *
-from .get_kms_decrypted_data import *
-from .get_kms_encrypted_data import *
-from .get_kms_key import *
-from .get_kms_key_version import *
-from .get_kms_key_versions import *
-from .get_kms_keys import *
-from .get_kms_replication_status import *
-from .get_kms_vault import *
-from .get_kms_vault_replicas import *
-from .get_kms_vault_usage import *
-from .get_kms_vaults import *
-from .get_limits_limit_definitions import *
-from .get_limits_limit_values import *
-from .get_limits_quota import *
-from .get_limits_quotas import *
-from .get_limits_resource_availability import *
-from .get_limits_services import *
-from .get_load_balancer_backend_health import *
-from .get_load_balancer_backend_set_health import *
-from .get_load_balancer_backend_sets import *
-from .get_load_balancer_backends import *
-from .get_load_balancer_certificates import *
-from .get_load_balancer_health import *
-from .get_load_balancer_hostnames import *
-from .get_load_balancer_listener_rules import *
-from .get_load_balancer_load_balancer_routing_policies import *
-from .get_load_balancer_load_balancer_routing_policy import *
-from .get_load_balancer_load_balancers import *
-from .get_load_balancer_path_route_sets import *
-from .get_load_balancer_policies import *
-from .get_load_balancer_protocols import *
-from .get_load_balancer_rule_set import *
-from .get_load_balancer_rule_sets import *
-from .get_load_balancer_shapes import *
-from .get_load_balancer_ssl_cipher_suite import *
-from .get_load_balancer_ssl_cipher_suites import *
-from .get_load_balancers import *
-from .get_log_analytics_log_analytics_entities import *
-from .get_log_analytics_log_analytics_entities_summary import *
-from .get_log_analytics_log_analytics_entity import *
-from .get_log_analytics_log_analytics_log_group import *
-from .get_log_analytics_log_analytics_log_groups import *
-from .get_log_analytics_log_analytics_log_groups_summary import *
-from .get_log_analytics_log_analytics_object_collection_rule import *
-from .get_log_analytics_log_analytics_object_collection_rules import *
-from .get_log_analytics_namespace import *
-from .get_log_analytics_namespaces import *
-from .get_logging_log import *
-from .get_logging_log_group import *
-from .get_logging_log_groups import *
-from .get_logging_log_saved_search import *
-from .get_logging_log_saved_searches import *
-from .get_logging_logs import *
-from .get_logging_unified_agent_configuration import *
-from .get_logging_unified_agent_configurations import *
-from .get_management_agent_management_agent import *
-from .get_management_agent_management_agent_available_histories import *
-from .get_management_agent_management_agent_images import *
-from .get_management_agent_management_agent_install_key import *
-from .get_management_agent_management_agent_install_keys import *
-from .get_management_agent_management_agent_plugins import *
-from .get_management_agent_management_agents import *
-from .get_management_dashboard_management_dashboards_export import *
-from .get_marketplace_accepted_agreement import *
-from .get_marketplace_accepted_agreements import *
-from .get_marketplace_categories import *
-from .get_marketplace_listing import *
-from .get_marketplace_listing_package import *
-from .get_marketplace_listing_package_agreements import *
-from .get_marketplace_listing_packages import *
-from .get_marketplace_listing_taxes import *
-from .get_marketplace_listings import *
-from .get_marketplace_publication import *
-from .get_marketplace_publication_package import *
-from .get_marketplace_publication_packages import *
-from .get_marketplace_publications import *
-from .get_marketplace_publishers import *
-from .get_metering_computation_configuration import *
-from .get_metering_computation_custom_table import *
-from .get_metering_computation_custom_tables import *
-from .get_metering_computation_queries import *
-from .get_metering_computation_query import *
-from .get_monitoring_alarm import *
-from .get_monitoring_alarm_history_collection import *
-from .get_monitoring_alarm_statuses import *
-from .get_monitoring_alarms import *
-from .get_monitoring_metric_data import *
-from .get_monitoring_metrics import *
-from .get_mysql_analytics_cluster import *
-from .get_mysql_channel import *
-from .get_mysql_channels import *
-from .get_mysql_heat_wave_cluster import *
-from .get_mysql_mysql_backup import *
-from .get_mysql_mysql_backups import *
-from .get_mysql_mysql_configuration import *
-from .get_mysql_mysql_configurations import *
-from .get_mysql_mysql_db_system import *
-from .get_mysql_mysql_db_systems import *
-from .get_mysql_mysql_versions import *
-from .get_mysql_shapes import *
-from .get_network_load_balancer_backend_health import *
-from .get_network_load_balancer_backend_set import *
-from .get_network_load_balancer_backend_set_health import *
-from .get_network_load_balancer_backend_sets import *
-from .get_network_load_balancer_backends import *
-from .get_network_load_balancer_listener import *
-from .get_network_load_balancer_listeners import *
-from .get_network_load_balancer_network_load_balancer import *
-from .get_network_load_balancer_network_load_balancer_health import *
-from .get_network_load_balancer_network_load_balancers import *
-from .get_network_load_balancer_network_load_balancers_policies import *
-from .get_network_load_balancer_network_load_balancers_protocols import *
-from .get_nosql_index import *
-from .get_nosql_indexes import *
-from .get_nosql_table import *
-from .get_nosql_tables import *
-from .get_objectstorage_bucket import *
-from .get_objectstorage_bucket_summaries import *
-from .get_objectstorage_namespace import *
-from .get_objectstorage_namespace_metadata import *
-from .get_objectstorage_object import *
-from .get_objectstorage_object_head import *
-from .get_objectstorage_object_lifecycle_policy import *
-from .get_objectstorage_object_versions import *
-from .get_objectstorage_objects import *
-from .get_objectstorage_preauthrequest import *
-from .get_objectstorage_preauthrequests import *
-from .get_objectstorage_replication_policies import *
-from .get_objectstorage_replication_policy import *
-from .get_objectstorage_replication_sources import *
-from .get_oce_oce_instance import *
-from .get_oce_oce_instances import *
-from .get_ocvp_esxi_host import *
-from .get_ocvp_esxi_hosts import *
-from .get_ocvp_sddc import *
-from .get_ocvp_sddcs import *
-from .get_ocvp_supported_skus import *
-from .get_ocvp_supported_vmware_software_versions import *
-from .get_oda_oda_instance import *
-from .get_oda_oda_instances import *
-from .get_ons_notification_topic import *
-from .get_ons_notification_topics import *
-from .get_ons_subscription import *
-from .get_ons_subscriptions import *
-from .get_opsi_database_insight import *
-from .get_opsi_database_insights import *
-from .get_opsi_enterprise_manager_bridge import *
-from .get_opsi_enterprise_manager_bridges import *
-from .get_opsi_host_insight import *
-from .get_opsi_host_insights import *
-from .get_optimizer_categories import *
-from .get_optimizer_category import *
-from .get_optimizer_enrollment_status import *
-from .get_optimizer_enrollment_statuses import *
-from .get_optimizer_histories import *
-from .get_optimizer_profile import *
-from .get_optimizer_profiles import *
-from .get_optimizer_recommendation import *
-from .get_optimizer_recommendations import *
-from .get_optimizer_resource_action import *
-from .get_optimizer_resource_actions import *
-from .get_osmanagement_managed_instance import *
-from .get_osmanagement_managed_instance_group import *
-from .get_osmanagement_managed_instance_groups import *
-from .get_osmanagement_managed_instances import *
-from .get_osmanagement_software_source import *
-from .get_osmanagement_software_sources import *
-from .get_resourcemanager_stack import *
-from .get_resourcemanager_stack_tf_state import *
-from .get_resourcemanager_stacks import *
-from .get_sch_service_connector import *
-from .get_sch_service_connectors import *
-from .get_service_catalog_private_application import *
-from .get_service_catalog_private_application_package import *
-from .get_service_catalog_private_application_packages import *
-from .get_service_catalog_private_applications import *
-from .get_service_catalog_service_catalog import *
-from .get_service_catalog_service_catalog_association import *
-from .get_service_catalog_service_catalog_associations import *
-from .get_service_catalog_service_catalogs import *
-from .get_streaming_connect_harness import *
-from .get_streaming_connect_harnesses import *
-from .get_streaming_stream import *
-from .get_streaming_stream_pool import *
-from .get_streaming_stream_pools import *
-from .get_streaming_streams import *
-from .get_vault_secret import *
-from .get_vault_secret_version import *
-from .get_vault_secrets import *
-from .get_vulnerability_scanning_host_scan_recipe import *
-from .get_vulnerability_scanning_host_scan_recipes import *
-from .get_vulnerability_scanning_host_scan_target import *
-from .get_vulnerability_scanning_host_scan_targets import *
-from .get_waas_address_list import *
-from .get_waas_address_lists import *
-from .get_waas_certificate import *
-from .get_waas_certificates import *
-from .get_waas_custom_protection_rule import *
-from .get_waas_custom_protection_rules import *
-from .get_waas_edge_subnets import *
-from .get_waas_http_redirect import *
-from .get_waas_http_redirects import *
-from .get_waas_protection_rule import *
-from .get_waas_protection_rules import *
-from .get_waas_waas_policies import *
-from .get_waas_waas_policy import *
-from .golden_gate_database_registration import *
-from .golden_gate_deployment import *
-from .golden_gate_deployment_backup import *
-from .health_checks_http_monitor import *
-from .health_checks_http_probe import *
-from .health_checks_ping_monitor import *
-from .health_checks_ping_probe import *
-from .identity_api_key import *
-from .identity_auth_token import *
-from .identity_authentication_policy import *
-from .identity_compartment import *
-from .identity_customer_secret_key import *
-from .identity_dynamic_group import *
-from .identity_group import *
-from .identity_identity_provider import *
-from .identity_idp_group_mapping import *
-from .identity_network_source import *
-from .identity_policy import *
-from .identity_smtp_credential import *
-from .identity_swift_password import *
-from .identity_tag import *
-from .identity_tag_default import *
-from .identity_tag_namespace import *
-from .identity_ui_password import *
-from .identity_user import *
-from .identity_user_capabilities_management import *
-from .identity_user_group_membership import *
-from .integration_integration_instance import *
-from .jms_fleet import *
-from .kms_encrypted_data import *
-from .kms_generated_key import *
-from .kms_key import *
-from .kms_key_version import *
-from .kms_sign import *
-from .kms_vault import *
-from .kms_vault_replication import *
-from .kms_verify import *
-from .limits_quota import *
-from .load_balancer import *
-from .load_balancer_backend import *
-from .load_balancer_backend_set import *
-from .load_balancer_certificate import *
-from .load_balancer_hostname import *
-from .load_balancer_listener import *
-from .load_balancer_load_balancer import *
-from .load_balancer_load_balancer_routing_policy import *
-from .load_balancer_path_route_set import *
-from .load_balancer_rule_set import *
-from .load_balancer_ssl_cipher_suite import *
-from .log_analytics_log_analytics_entity import *
-from .log_analytics_log_analytics_log_group import *
-from .log_analytics_log_analytics_object_collection_rule import *
-from .log_analytics_namespace import *
-from .logging_log import *
-from .logging_log_group import *
-from .logging_log_saved_search import *
-from .logging_unified_agent_configuration import *
-from .management_agent_management_agent import *
-from .management_agent_management_agent_install_key import *
-from .management_dashboard_management_dashboards_import import *
-from .marketplace_accepted_agreement import *
-from .marketplace_listing_package_agreement import *
-from .marketplace_publication import *
-from .metering_computation_custom_table import *
-from .metering_computation_query import *
-from .metering_computation_usage import *
-from .monitoring_alarm import *
-from .mysql_analytics_cluster import *
-from .mysql_channel import *
-from .mysql_heat_wave_cluster import *
-from .mysql_mysql_backup import *
-from .mysql_mysql_db_system import *
-from .network_load_balancer_backend import *
-from .network_load_balancer_backend_set import *
-from .network_load_balancer_listener import *
-from .network_load_balancer_network_load_balancer import *
-from .nosql_index import *
-from .nosql_table import *
-from .objectstorage_bucket import *
-from .objectstorage_namespace_metadata import *
-from .objectstorage_object import *
-from .objectstorage_object_lifecycle_policy import *
-from .objectstorage_preauthrequest import *
-from .objectstorage_replication_policy import *
-from .oce_oce_instance import *
-from .ocvp_esxi_host import *
-from .ocvp_sddc import *
-from .oda_oda_instance import *
-from .ons_notification_topic import *
-from .ons_subscription import *
-from .opsi_database_insight import *
-from .opsi_enterprise_manager_bridge import *
-from .opsi_host_insight import *
-from .optimizer_enrollment_status import *
-from .optimizer_profile import *
-from .optimizer_recommendation import *
-from .optimizer_resource_action import *
-from .osmanagement_managed_instance_group import *
-from .osmanagement_managed_instance_management import *
-from .osmanagement_software_source import *
 from .provider import *
-from .sch_service_connector import *
-from .service_catalog_private_application import *
-from .service_catalog_service_catalog import *
-from .service_catalog_service_catalog_association import *
-from .streaming_connect_harness import *
-from .streaming_stream import *
-from .streaming_stream_pool import *
-from .vulnerability_scanning_host_scan_recipe import *
-from .vulnerability_scanning_host_scan_target import *
-from .waas_address_list import *
-from .waas_certificate import *
-from .waas_custom_protection_rule import *
-from .waas_http_redirect import *
-from .waas_protection_rule import *
-from .waas_purge_cache import *
-from .waas_waas_policy import *
-from ._inputs import *
-from . import outputs
 
 # Make subpackages available:
 if typing.TYPE_CHECKING:
+    import pulumi_oci.aianomalydetection as aianomalydetection
+    import pulumi_oci.analytics as analytics
+    import pulumi_oci.apigateway as apigateway
+    import pulumi_oci.apm as apm
+    import pulumi_oci.apmsynthetics as apmsynthetics
+    import pulumi_oci.artifacts as artifacts
+    import pulumi_oci.audit as audit
+    import pulumi_oci.autoscaling as autoscaling
+    import pulumi_oci.bastion as bastion
+    import pulumi_oci.bds as bds
+    import pulumi_oci.blockchain as blockchain
+    import pulumi_oci.budget as budget
+    import pulumi_oci.cloudguard as cloudguard
+    import pulumi_oci.computeinstanceagent as computeinstanceagent
     import pulumi_oci.config as config
+    import pulumi_oci.containerengine as containerengine
+    import pulumi_oci.core as core
+    import pulumi_oci.database as database
+    import pulumi_oci.databasemanagement as databasemanagement
+    import pulumi_oci.databasemigration as databasemigration
+    import pulumi_oci.datacatalog as datacatalog
+    import pulumi_oci.dataflow as dataflow
+    import pulumi_oci.dataintegration as dataintegration
+    import pulumi_oci.datasafe as datasafe
+    import pulumi_oci.datascience as datascience
+    import pulumi_oci.devops as devops
+    import pulumi_oci.dns as dns
+    import pulumi_oci.email as email
+    import pulumi_oci.events as events
+    import pulumi_oci.filestorage as filestorage
+    import pulumi_oci.functions as functions
+    import pulumi_oci.genericartifactscontent as genericartifactscontent
+    import pulumi_oci.goldengate as goldengate
+    import pulumi_oci.healthchecks as healthchecks
+    import pulumi_oci.identity as identity
+    import pulumi_oci.integration as integration
+    import pulumi_oci.jms as jms
+    import pulumi_oci.kms as kms
+    import pulumi_oci.limits as limits
+    import pulumi_oci.loadbalancer as loadbalancer
+    import pulumi_oci.loganalytics as loganalytics
+    import pulumi_oci.logging as logging
+    import pulumi_oci.managementagent as managementagent
+    import pulumi_oci.managementdashboard as managementdashboard
+    import pulumi_oci.marketplace as marketplace
+    import pulumi_oci.meteringcomputation as meteringcomputation
+    import pulumi_oci.monitoring as monitoring
+    import pulumi_oci.mysql as mysql
+    import pulumi_oci.networkloadbalancer as networkloadbalancer
+    import pulumi_oci.nosql as nosql
+    import pulumi_oci.objectstorage as objectstorage
+    import pulumi_oci.oce as oce
+    import pulumi_oci.ocvp as ocvp
+    import pulumi_oci.oda as oda
+    import pulumi_oci.ons as ons
+    import pulumi_oci.opsi as opsi
+    import pulumi_oci.optimizer as optimizer
+    import pulumi_oci.osmanagement as osmanagement
+    import pulumi_oci.resourcemanager as resourcemanager
+    import pulumi_oci.sch as sch
+    import pulumi_oci.servicecatalog as servicecatalog
+    import pulumi_oci.streaming as streaming
+    import pulumi_oci.vault as vault
+    import pulumi_oci.vulnerabilityscanning as vulnerabilityscanning
+    import pulumi_oci.waas as waas
 else:
+    aianomalydetection = _utilities.lazy_import('pulumi_oci.aianomalydetection')
+    analytics = _utilities.lazy_import('pulumi_oci.analytics')
+    apigateway = _utilities.lazy_import('pulumi_oci.apigateway')
+    apm = _utilities.lazy_import('pulumi_oci.apm')
+    apmsynthetics = _utilities.lazy_import('pulumi_oci.apmsynthetics')
+    artifacts = _utilities.lazy_import('pulumi_oci.artifacts')
+    audit = _utilities.lazy_import('pulumi_oci.audit')
+    autoscaling = _utilities.lazy_import('pulumi_oci.autoscaling')
+    bastion = _utilities.lazy_import('pulumi_oci.bastion')
+    bds = _utilities.lazy_import('pulumi_oci.bds')
+    blockchain = _utilities.lazy_import('pulumi_oci.blockchain')
+    budget = _utilities.lazy_import('pulumi_oci.budget')
+    cloudguard = _utilities.lazy_import('pulumi_oci.cloudguard')
+    computeinstanceagent = _utilities.lazy_import('pulumi_oci.computeinstanceagent')
     config = _utilities.lazy_import('pulumi_oci.config')
+    containerengine = _utilities.lazy_import('pulumi_oci.containerengine')
+    core = _utilities.lazy_import('pulumi_oci.core')
+    database = _utilities.lazy_import('pulumi_oci.database')
+    databasemanagement = _utilities.lazy_import('pulumi_oci.databasemanagement')
+    databasemigration = _utilities.lazy_import('pulumi_oci.databasemigration')
+    datacatalog = _utilities.lazy_import('pulumi_oci.datacatalog')
+    dataflow = _utilities.lazy_import('pulumi_oci.dataflow')
+    dataintegration = _utilities.lazy_import('pulumi_oci.dataintegration')
+    datasafe = _utilities.lazy_import('pulumi_oci.datasafe')
+    datascience = _utilities.lazy_import('pulumi_oci.datascience')
+    devops = _utilities.lazy_import('pulumi_oci.devops')
+    dns = _utilities.lazy_import('pulumi_oci.dns')
+    email = _utilities.lazy_import('pulumi_oci.email')
+    events = _utilities.lazy_import('pulumi_oci.events')
+    filestorage = _utilities.lazy_import('pulumi_oci.filestorage')
+    functions = _utilities.lazy_import('pulumi_oci.functions')
+    genericartifactscontent = _utilities.lazy_import('pulumi_oci.genericartifactscontent')
+    goldengate = _utilities.lazy_import('pulumi_oci.goldengate')
+    healthchecks = _utilities.lazy_import('pulumi_oci.healthchecks')
+    identity = _utilities.lazy_import('pulumi_oci.identity')
+    integration = _utilities.lazy_import('pulumi_oci.integration')
+    jms = _utilities.lazy_import('pulumi_oci.jms')
+    kms = _utilities.lazy_import('pulumi_oci.kms')
+    limits = _utilities.lazy_import('pulumi_oci.limits')
+    loadbalancer = _utilities.lazy_import('pulumi_oci.loadbalancer')
+    loganalytics = _utilities.lazy_import('pulumi_oci.loganalytics')
+    logging = _utilities.lazy_import('pulumi_oci.logging')
+    managementagent = _utilities.lazy_import('pulumi_oci.managementagent')
+    managementdashboard = _utilities.lazy_import('pulumi_oci.managementdashboard')
+    marketplace = _utilities.lazy_import('pulumi_oci.marketplace')
+    meteringcomputation = _utilities.lazy_import('pulumi_oci.meteringcomputation')
+    monitoring = _utilities.lazy_import('pulumi_oci.monitoring')
+    mysql = _utilities.lazy_import('pulumi_oci.mysql')
+    networkloadbalancer = _utilities.lazy_import('pulumi_oci.networkloadbalancer')
+    nosql = _utilities.lazy_import('pulumi_oci.nosql')
+    objectstorage = _utilities.lazy_import('pulumi_oci.objectstorage')
+    oce = _utilities.lazy_import('pulumi_oci.oce')
+    ocvp = _utilities.lazy_import('pulumi_oci.ocvp')
+    oda = _utilities.lazy_import('pulumi_oci.oda')
+    ons = _utilities.lazy_import('pulumi_oci.ons')
+    opsi = _utilities.lazy_import('pulumi_oci.opsi')
+    optimizer = _utilities.lazy_import('pulumi_oci.optimizer')
+    osmanagement = _utilities.lazy_import('pulumi_oci.osmanagement')
+    resourcemanager = _utilities.lazy_import('pulumi_oci.resourcemanager')
+    sch = _utilities.lazy_import('pulumi_oci.sch')
+    servicecatalog = _utilities.lazy_import('pulumi_oci.servicecatalog')
+    streaming = _utilities.lazy_import('pulumi_oci.streaming')
+    vault = _utilities.lazy_import('pulumi_oci.vault')
+    vulnerabilityscanning = _utilities.lazy_import('pulumi_oci.vulnerabilityscanning')
+    waas = _utilities.lazy_import('pulumi_oci.waas')
 
 _utilities.register(
     resource_modules="""
 [
  {
   "pkg": "oci",
-  "mod": "index/analyticsAnalyticsInstance",
-  "fqn": "pulumi_oci",
+  "mod": "aianomalydetection/aiPrivateEndpoint",
+  "fqn": "pulumi_oci.aianomalydetection",
   "classes": {
-   "oci:index/analyticsAnalyticsInstance:AnalyticsAnalyticsInstance": "AnalyticsAnalyticsInstance"
+   "oci:aianomalydetection/aiPrivateEndpoint:AiPrivateEndpoint": "AiPrivateEndpoint"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/analyticsAnalyticsInstancePrivateAccessChannel",
-  "fqn": "pulumi_oci",
+  "mod": "aianomalydetection/dataAsset",
+  "fqn": "pulumi_oci.aianomalydetection",
   "classes": {
-   "oci:index/analyticsAnalyticsInstancePrivateAccessChannel:AnalyticsAnalyticsInstancePrivateAccessChannel": "AnalyticsAnalyticsInstancePrivateAccessChannel"
+   "oci:aianomalydetection/dataAsset:DataAsset": "DataAsset"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/analyticsAnalyticsInstanceVanityUrl",
-  "fqn": "pulumi_oci",
+  "mod": "aianomalydetection/model",
+  "fqn": "pulumi_oci.aianomalydetection",
   "classes": {
-   "oci:index/analyticsAnalyticsInstanceVanityUrl:AnalyticsAnalyticsInstanceVanityUrl": "AnalyticsAnalyticsInstanceVanityUrl"
+   "oci:aianomalydetection/model:Model": "Model"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/apigatewayApi",
-  "fqn": "pulumi_oci",
+  "mod": "aianomalydetection/project",
+  "fqn": "pulumi_oci.aianomalydetection",
   "classes": {
-   "oci:index/apigatewayApi:ApigatewayApi": "ApigatewayApi"
+   "oci:aianomalydetection/project:Project": "Project"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/apigatewayCertificate",
-  "fqn": "pulumi_oci",
+  "mod": "analytics/analyticsInstance",
+  "fqn": "pulumi_oci.analytics",
   "classes": {
-   "oci:index/apigatewayCertificate:ApigatewayCertificate": "ApigatewayCertificate"
+   "oci:analytics/analyticsInstance:AnalyticsInstance": "AnalyticsInstance"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/apigatewayDeployment",
-  "fqn": "pulumi_oci",
+  "mod": "analytics/analyticsInstancePrivateAccessChannel",
+  "fqn": "pulumi_oci.analytics",
   "classes": {
-   "oci:index/apigatewayDeployment:ApigatewayDeployment": "ApigatewayDeployment"
+   "oci:analytics/analyticsInstancePrivateAccessChannel:AnalyticsInstancePrivateAccessChannel": "AnalyticsInstancePrivateAccessChannel"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/apigatewayGateway",
-  "fqn": "pulumi_oci",
+  "mod": "analytics/analyticsInstanceVanityUrl",
+  "fqn": "pulumi_oci.analytics",
   "classes": {
-   "oci:index/apigatewayGateway:ApigatewayGateway": "ApigatewayGateway"
+   "oci:analytics/analyticsInstanceVanityUrl:AnalyticsInstanceVanityUrl": "AnalyticsInstanceVanityUrl"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/apmApmDomain",
-  "fqn": "pulumi_oci",
+  "mod": "apigateway/api",
+  "fqn": "pulumi_oci.apigateway",
   "classes": {
-   "oci:index/apmApmDomain:ApmApmDomain": "ApmApmDomain"
+   "oci:apigateway/api:Api": "Api"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/apmSyntheticsMonitor",
-  "fqn": "pulumi_oci",
+  "mod": "apigateway/certificate",
+  "fqn": "pulumi_oci.apigateway",
   "classes": {
-   "oci:index/apmSyntheticsMonitor:ApmSyntheticsMonitor": "ApmSyntheticsMonitor"
+   "oci:apigateway/certificate:Certificate": "Certificate"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/apmSyntheticsScript",
-  "fqn": "pulumi_oci",
+  "mod": "apigateway/deployment",
+  "fqn": "pulumi_oci.apigateway",
   "classes": {
-   "oci:index/apmSyntheticsScript:ApmSyntheticsScript": "ApmSyntheticsScript"
+   "oci:apigateway/deployment:Deployment": "Deployment"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/artifactsContainerConfiguration",
-  "fqn": "pulumi_oci",
+  "mod": "apigateway/gateway",
+  "fqn": "pulumi_oci.apigateway",
   "classes": {
-   "oci:index/artifactsContainerConfiguration:ArtifactsContainerConfiguration": "ArtifactsContainerConfiguration"
+   "oci:apigateway/gateway:Gateway": "Gateway"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/artifactsContainerImageSignature",
-  "fqn": "pulumi_oci",
+  "mod": "apm/apmDomain",
+  "fqn": "pulumi_oci.apm",
   "classes": {
-   "oci:index/artifactsContainerImageSignature:ArtifactsContainerImageSignature": "ArtifactsContainerImageSignature"
+   "oci:apm/apmDomain:ApmDomain": "ApmDomain"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/artifactsContainerRepository",
-  "fqn": "pulumi_oci",
+  "mod": "apmsynthetics/monitor",
+  "fqn": "pulumi_oci.apmsynthetics",
   "classes": {
-   "oci:index/artifactsContainerRepository:ArtifactsContainerRepository": "ArtifactsContainerRepository"
+   "oci:apmsynthetics/monitor:Monitor": "Monitor"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/artifactsGenericArtifact",
-  "fqn": "pulumi_oci",
+  "mod": "apmsynthetics/script",
+  "fqn": "pulumi_oci.apmsynthetics",
   "classes": {
-   "oci:index/artifactsGenericArtifact:ArtifactsGenericArtifact": "ArtifactsGenericArtifact"
+   "oci:apmsynthetics/script:Script": "Script"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/artifactsRepository",
-  "fqn": "pulumi_oci",
+  "mod": "artifacts/containerConfiguration",
+  "fqn": "pulumi_oci.artifacts",
   "classes": {
-   "oci:index/artifactsRepository:ArtifactsRepository": "ArtifactsRepository"
+   "oci:artifacts/containerConfiguration:ContainerConfiguration": "ContainerConfiguration"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/auditConfiguration",
-  "fqn": "pulumi_oci",
+  "mod": "artifacts/containerImageSignature",
+  "fqn": "pulumi_oci.artifacts",
   "classes": {
-   "oci:index/auditConfiguration:AuditConfiguration": "AuditConfiguration"
+   "oci:artifacts/containerImageSignature:ContainerImageSignature": "ContainerImageSignature"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/autoscalingAutoScalingConfiguration",
-  "fqn": "pulumi_oci",
+  "mod": "artifacts/containerRepository",
+  "fqn": "pulumi_oci.artifacts",
   "classes": {
-   "oci:index/autoscalingAutoScalingConfiguration:AutoscalingAutoScalingConfiguration": "AutoscalingAutoScalingConfiguration"
+   "oci:artifacts/containerRepository:ContainerRepository": "ContainerRepository"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/bastionBastion",
-  "fqn": "pulumi_oci",
+  "mod": "artifacts/genericArtifact",
+  "fqn": "pulumi_oci.artifacts",
   "classes": {
-   "oci:index/bastionBastion:BastionBastion": "BastionBastion"
+   "oci:artifacts/genericArtifact:GenericArtifact": "GenericArtifact"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/bastionSession",
-  "fqn": "pulumi_oci",
+  "mod": "artifacts/repository",
+  "fqn": "pulumi_oci.artifacts",
   "classes": {
-   "oci:index/bastionSession:BastionSession": "BastionSession"
+   "oci:artifacts/repository:Repository": "Repository"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/bdsAutoScalingConfiguration",
-  "fqn": "pulumi_oci",
+  "mod": "audit/configuration",
+  "fqn": "pulumi_oci.audit",
   "classes": {
-   "oci:index/bdsAutoScalingConfiguration:BdsAutoScalingConfiguration": "BdsAutoScalingConfiguration"
+   "oci:audit/configuration:Configuration": "Configuration"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/bdsBdsInstance",
-  "fqn": "pulumi_oci",
+  "mod": "autoscaling/autoScalingConfiguration",
+  "fqn": "pulumi_oci.autoscaling",
   "classes": {
-   "oci:index/bdsBdsInstance:BdsBdsInstance": "BdsBdsInstance"
+   "oci:autoscaling/autoScalingConfiguration:AutoScalingConfiguration": "AutoScalingConfiguration"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/blockchainBlockchainPlatform",
-  "fqn": "pulumi_oci",
+  "mod": "bastion/bastion",
+  "fqn": "pulumi_oci.bastion",
   "classes": {
-   "oci:index/blockchainBlockchainPlatform:BlockchainBlockchainPlatform": "BlockchainBlockchainPlatform"
+   "oci:bastion/bastion:Bastion": "Bastion"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/blockchainOsn",
-  "fqn": "pulumi_oci",
+  "mod": "bastion/session",
+  "fqn": "pulumi_oci.bastion",
   "classes": {
-   "oci:index/blockchainOsn:BlockchainOsn": "BlockchainOsn"
+   "oci:bastion/session:Session": "Session"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/blockchainPeer",
-  "fqn": "pulumi_oci",
+  "mod": "bds/autoScalingConfiguration",
+  "fqn": "pulumi_oci.bds",
   "classes": {
-   "oci:index/blockchainPeer:BlockchainPeer": "BlockchainPeer"
+   "oci:bds/autoScalingConfiguration:AutoScalingConfiguration": "AutoScalingConfiguration"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/budgetAlertRule",
-  "fqn": "pulumi_oci",
+  "mod": "bds/bdsInstance",
+  "fqn": "pulumi_oci.bds",
   "classes": {
-   "oci:index/budgetAlertRule:BudgetAlertRule": "BudgetAlertRule"
+   "oci:bds/bdsInstance:BdsInstance": "BdsInstance"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/budgetBudget",
-  "fqn": "pulumi_oci",
+  "mod": "blockchain/blockchainPlatform",
+  "fqn": "pulumi_oci.blockchain",
   "classes": {
-   "oci:index/budgetBudget:BudgetBudget": "BudgetBudget"
+   "oci:blockchain/blockchainPlatform:BlockchainPlatform": "BlockchainPlatform"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/cloudGuardCloudGuardConfiguration",
-  "fqn": "pulumi_oci",
+  "mod": "blockchain/osn",
+  "fqn": "pulumi_oci.blockchain",
   "classes": {
-   "oci:index/cloudGuardCloudGuardConfiguration:CloudGuardCloudGuardConfiguration": "CloudGuardCloudGuardConfiguration"
+   "oci:blockchain/osn:Osn": "Osn"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/cloudGuardDataMaskRule",
-  "fqn": "pulumi_oci",
+  "mod": "blockchain/peer",
+  "fqn": "pulumi_oci.blockchain",
   "classes": {
-   "oci:index/cloudGuardDataMaskRule:CloudGuardDataMaskRule": "CloudGuardDataMaskRule"
+   "oci:blockchain/peer:Peer": "Peer"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/cloudGuardDetectorRecipe",
-  "fqn": "pulumi_oci",
+  "mod": "budget/alertRule",
+  "fqn": "pulumi_oci.budget",
   "classes": {
-   "oci:index/cloudGuardDetectorRecipe:CloudGuardDetectorRecipe": "CloudGuardDetectorRecipe"
+   "oci:budget/alertRule:AlertRule": "AlertRule"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/cloudGuardManagedList",
-  "fqn": "pulumi_oci",
+  "mod": "budget/budget",
+  "fqn": "pulumi_oci.budget",
   "classes": {
-   "oci:index/cloudGuardManagedList:CloudGuardManagedList": "CloudGuardManagedList"
+   "oci:budget/budget:Budget": "Budget"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/cloudGuardResponderRecipe",
-  "fqn": "pulumi_oci",
+  "mod": "cloudguard/cloudGuardConfiguration",
+  "fqn": "pulumi_oci.cloudguard",
   "classes": {
-   "oci:index/cloudGuardResponderRecipe:CloudGuardResponderRecipe": "CloudGuardResponderRecipe"
+   "oci:cloudguard/cloudGuardConfiguration:CloudGuardConfiguration": "CloudGuardConfiguration"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/cloudGuardTarget",
-  "fqn": "pulumi_oci",
+  "mod": "cloudguard/dataMaskRule",
+  "fqn": "pulumi_oci.cloudguard",
   "classes": {
-   "oci:index/cloudGuardTarget:CloudGuardTarget": "CloudGuardTarget"
+   "oci:cloudguard/dataMaskRule:DataMaskRule": "DataMaskRule"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/containerengineCluster",
-  "fqn": "pulumi_oci",
+  "mod": "cloudguard/detectorRecipe",
+  "fqn": "pulumi_oci.cloudguard",
   "classes": {
-   "oci:index/containerengineCluster:ContainerengineCluster": "ContainerengineCluster"
+   "oci:cloudguard/detectorRecipe:DetectorRecipe": "DetectorRecipe"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/containerengineNodePool",
-  "fqn": "pulumi_oci",
+  "mod": "cloudguard/managedList",
+  "fqn": "pulumi_oci.cloudguard",
   "classes": {
-   "oci:index/containerengineNodePool:ContainerengineNodePool": "ContainerengineNodePool"
+   "oci:cloudguard/managedList:ManagedList": "ManagedList"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreAppCatalogListingResourceVersionAgreement",
-  "fqn": "pulumi_oci",
+  "mod": "cloudguard/responderRecipe",
+  "fqn": "pulumi_oci.cloudguard",
   "classes": {
-   "oci:index/coreAppCatalogListingResourceVersionAgreement:CoreAppCatalogListingResourceVersionAgreement": "CoreAppCatalogListingResourceVersionAgreement"
+   "oci:cloudguard/responderRecipe:ResponderRecipe": "ResponderRecipe"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreAppCatalogSubscription",
-  "fqn": "pulumi_oci",
+  "mod": "cloudguard/target",
+  "fqn": "pulumi_oci.cloudguard",
   "classes": {
-   "oci:index/coreAppCatalogSubscription:CoreAppCatalogSubscription": "CoreAppCatalogSubscription"
+   "oci:cloudguard/target:Target": "Target"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreBootVolume",
-  "fqn": "pulumi_oci",
+  "mod": "containerengine/cluster",
+  "fqn": "pulumi_oci.containerengine",
   "classes": {
-   "oci:index/coreBootVolume:CoreBootVolume": "CoreBootVolume"
+   "oci:containerengine/cluster:Cluster": "Cluster"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreBootVolumeBackup",
-  "fqn": "pulumi_oci",
+  "mod": "containerengine/nodePool",
+  "fqn": "pulumi_oci.containerengine",
   "classes": {
-   "oci:index/coreBootVolumeBackup:CoreBootVolumeBackup": "CoreBootVolumeBackup"
+   "oci:containerengine/nodePool:NodePool": "NodePool"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreClusterNetwork",
-  "fqn": "pulumi_oci",
+  "mod": "core/appCatalogListingResourceVersionAgreement",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreClusterNetwork:CoreClusterNetwork": "CoreClusterNetwork"
+   "oci:core/appCatalogListingResourceVersionAgreement:AppCatalogListingResourceVersionAgreement": "AppCatalogListingResourceVersionAgreement"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreComputeCapacityReservation",
-  "fqn": "pulumi_oci",
+  "mod": "core/appCatalogSubscription",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreComputeCapacityReservation:CoreComputeCapacityReservation": "CoreComputeCapacityReservation"
+   "oci:core/appCatalogSubscription:AppCatalogSubscription": "AppCatalogSubscription"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreComputeImageCapabilitySchema",
-  "fqn": "pulumi_oci",
+  "mod": "core/bootVolume",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreComputeImageCapabilitySchema:CoreComputeImageCapabilitySchema": "CoreComputeImageCapabilitySchema"
+   "oci:core/bootVolume:BootVolume": "BootVolume"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreConsoleHistory",
-  "fqn": "pulumi_oci",
+  "mod": "core/bootVolumeBackup",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreConsoleHistory:CoreConsoleHistory": "CoreConsoleHistory"
+   "oci:core/bootVolumeBackup:BootVolumeBackup": "BootVolumeBackup"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreCpe",
-  "fqn": "pulumi_oci",
+  "mod": "core/clusterNetwork",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreCpe:CoreCpe": "CoreCpe"
+   "oci:core/clusterNetwork:ClusterNetwork": "ClusterNetwork"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreCrossConnect",
-  "fqn": "pulumi_oci",
+  "mod": "core/computeCapacityReservation",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreCrossConnect:CoreCrossConnect": "CoreCrossConnect"
+   "oci:core/computeCapacityReservation:ComputeCapacityReservation": "ComputeCapacityReservation"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreCrossConnectGroup",
-  "fqn": "pulumi_oci",
+  "mod": "core/computeImageCapabilitySchema",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreCrossConnectGroup:CoreCrossConnectGroup": "CoreCrossConnectGroup"
+   "oci:core/computeImageCapabilitySchema:ComputeImageCapabilitySchema": "ComputeImageCapabilitySchema"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreDedicatedVmHost",
-  "fqn": "pulumi_oci",
+  "mod": "core/consoleHistory",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreDedicatedVmHost:CoreDedicatedVmHost": "CoreDedicatedVmHost"
+   "oci:core/consoleHistory:ConsoleHistory": "ConsoleHistory"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreDefaultDhcpOptions",
-  "fqn": "pulumi_oci",
+  "mod": "core/cpe",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreDefaultDhcpOptions:CoreDefaultDhcpOptions": "CoreDefaultDhcpOptions"
+   "oci:core/cpe:Cpe": "Cpe"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreDefaultRouteTable",
-  "fqn": "pulumi_oci",
+  "mod": "core/crossConnect",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreDefaultRouteTable:CoreDefaultRouteTable": "CoreDefaultRouteTable"
+   "oci:core/crossConnect:CrossConnect": "CrossConnect"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreDefaultSecurityList",
-  "fqn": "pulumi_oci",
+  "mod": "core/crossConnectGroup",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreDefaultSecurityList:CoreDefaultSecurityList": "CoreDefaultSecurityList"
+   "oci:core/crossConnectGroup:CrossConnectGroup": "CrossConnectGroup"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreDhcpOptions",
-  "fqn": "pulumi_oci",
+  "mod": "core/dedicatedVmHost",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreDhcpOptions:CoreDhcpOptions": "CoreDhcpOptions"
+   "oci:core/dedicatedVmHost:DedicatedVmHost": "DedicatedVmHost"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreDrg",
-  "fqn": "pulumi_oci",
+  "mod": "core/dhcpOptions",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreDrg:CoreDrg": "CoreDrg"
+   "oci:core/dhcpOptions:DhcpOptions": "DhcpOptions"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreDrgAttachment",
-  "fqn": "pulumi_oci",
+  "mod": "core/drg",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreDrgAttachment:CoreDrgAttachment": "CoreDrgAttachment"
+   "oci:core/drg:Drg": "Drg"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreDrgAttachmentManagement",
-  "fqn": "pulumi_oci",
+  "mod": "core/drgAttachment",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreDrgAttachmentManagement:CoreDrgAttachmentManagement": "CoreDrgAttachmentManagement"
+   "oci:core/drgAttachment:DrgAttachment": "DrgAttachment"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreDrgAttachmentsList",
-  "fqn": "pulumi_oci",
+  "mod": "core/drgAttachmentManagement",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreDrgAttachmentsList:CoreDrgAttachmentsList": "CoreDrgAttachmentsList"
+   "oci:core/drgAttachmentManagement:DrgAttachmentManagement": "DrgAttachmentManagement"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreDrgRouteDistribution",
-  "fqn": "pulumi_oci",
+  "mod": "core/drgAttachmentsList",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreDrgRouteDistribution:CoreDrgRouteDistribution": "CoreDrgRouteDistribution"
+   "oci:core/drgAttachmentsList:DrgAttachmentsList": "DrgAttachmentsList"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreDrgRouteDistributionStatement",
-  "fqn": "pulumi_oci",
+  "mod": "core/drgRouteDistribution",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreDrgRouteDistributionStatement:CoreDrgRouteDistributionStatement": "CoreDrgRouteDistributionStatement"
+   "oci:core/drgRouteDistribution:DrgRouteDistribution": "DrgRouteDistribution"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreDrgRouteTable",
-  "fqn": "pulumi_oci",
+  "mod": "core/drgRouteDistributionStatement",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreDrgRouteTable:CoreDrgRouteTable": "CoreDrgRouteTable"
+   "oci:core/drgRouteDistributionStatement:DrgRouteDistributionStatement": "DrgRouteDistributionStatement"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreDrgRouteTableRouteRule",
-  "fqn": "pulumi_oci",
+  "mod": "core/drgRouteTable",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreDrgRouteTableRouteRule:CoreDrgRouteTableRouteRule": "CoreDrgRouteTableRouteRule"
+   "oci:core/drgRouteTable:DrgRouteTable": "DrgRouteTable"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreImage",
-  "fqn": "pulumi_oci",
+  "mod": "core/drgRouteTableRouteRule",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreImage:CoreImage": "CoreImage"
+   "oci:core/drgRouteTableRouteRule:DrgRouteTableRouteRule": "DrgRouteTableRouteRule"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreInstance",
-  "fqn": "pulumi_oci",
+  "mod": "core/image",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreInstance:CoreInstance": "CoreInstance"
+   "oci:core/image:Image": "Image"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreInstanceConfiguration",
-  "fqn": "pulumi_oci",
+  "mod": "core/instance",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreInstanceConfiguration:CoreInstanceConfiguration": "CoreInstanceConfiguration"
+   "oci:core/instance:Instance": "Instance"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreInstanceConsoleConnection",
-  "fqn": "pulumi_oci",
+  "mod": "core/instanceConfiguration",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreInstanceConsoleConnection:CoreInstanceConsoleConnection": "CoreInstanceConsoleConnection"
+   "oci:core/instanceConfiguration:InstanceConfiguration": "InstanceConfiguration"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreInstancePool",
-  "fqn": "pulumi_oci",
+  "mod": "core/instanceConsoleConnection",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreInstancePool:CoreInstancePool": "CoreInstancePool"
+   "oci:core/instanceConsoleConnection:InstanceConsoleConnection": "InstanceConsoleConnection"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreInstancePoolInstance",
-  "fqn": "pulumi_oci",
+  "mod": "core/instancePool",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreInstancePoolInstance:CoreInstancePoolInstance": "CoreInstancePoolInstance"
+   "oci:core/instancePool:InstancePool": "InstancePool"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreInternetGateway",
-  "fqn": "pulumi_oci",
+  "mod": "core/instancePoolInstance",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreInternetGateway:CoreInternetGateway": "CoreInternetGateway"
+   "oci:core/instancePoolInstance:InstancePoolInstance": "InstancePoolInstance"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreIpsec",
-  "fqn": "pulumi_oci",
+  "mod": "core/internetGateway",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreIpsec:CoreIpsec": "CoreIpsec"
+   "oci:core/internetGateway:InternetGateway": "InternetGateway"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreIpsecConnectionTunnelManagement",
-  "fqn": "pulumi_oci",
+  "mod": "core/ipsec",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreIpsecConnectionTunnelManagement:CoreIpsecConnectionTunnelManagement": "CoreIpsecConnectionTunnelManagement"
+   "oci:core/ipsec:Ipsec": "Ipsec"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreIpv6",
-  "fqn": "pulumi_oci",
+  "mod": "core/ipsecConnectionTunnelManagement",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreIpv6:CoreIpv6": "CoreIpv6"
+   "oci:core/ipsecConnectionTunnelManagement:IpsecConnectionTunnelManagement": "IpsecConnectionTunnelManagement"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreListingResourceVersionAgreement",
-  "fqn": "pulumi_oci",
+  "mod": "core/ipv6",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreListingResourceVersionAgreement:CoreListingResourceVersionAgreement": "CoreListingResourceVersionAgreement"
+   "oci:core/ipv6:Ipv6": "Ipv6"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreLocalPeeringGateway",
-  "fqn": "pulumi_oci",
+  "mod": "core/localPeeringGateway",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreLocalPeeringGateway:CoreLocalPeeringGateway": "CoreLocalPeeringGateway"
+   "oci:core/localPeeringGateway:LocalPeeringGateway": "LocalPeeringGateway"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreNatGateway",
-  "fqn": "pulumi_oci",
+  "mod": "core/natGateway",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreNatGateway:CoreNatGateway": "CoreNatGateway"
+   "oci:core/natGateway:NatGateway": "NatGateway"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreNetworkSecurityGroup",
-  "fqn": "pulumi_oci",
+  "mod": "core/networkSecurityGroup",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreNetworkSecurityGroup:CoreNetworkSecurityGroup": "CoreNetworkSecurityGroup"
+   "oci:core/networkSecurityGroup:NetworkSecurityGroup": "NetworkSecurityGroup"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreNetworkSecurityGroupSecurityRule",
-  "fqn": "pulumi_oci",
+  "mod": "core/networkSecurityGroupSecurityRule",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreNetworkSecurityGroupSecurityRule:CoreNetworkSecurityGroupSecurityRule": "CoreNetworkSecurityGroupSecurityRule"
+   "oci:core/networkSecurityGroupSecurityRule:NetworkSecurityGroupSecurityRule": "NetworkSecurityGroupSecurityRule"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/corePrivateIp",
-  "fqn": "pulumi_oci",
+  "mod": "core/privateIp",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/corePrivateIp:CorePrivateIp": "CorePrivateIp"
+   "oci:core/privateIp:PrivateIp": "PrivateIp"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/corePublicIp",
-  "fqn": "pulumi_oci",
+  "mod": "core/publicIp",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/corePublicIp:CorePublicIp": "CorePublicIp"
+   "oci:core/publicIp:PublicIp": "PublicIp"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/corePublicIpPool",
-  "fqn": "pulumi_oci",
+  "mod": "core/publicIpPool",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/corePublicIpPool:CorePublicIpPool": "CorePublicIpPool"
+   "oci:core/publicIpPool:PublicIpPool": "PublicIpPool"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/corePublicIpPoolCapacity",
-  "fqn": "pulumi_oci",
+  "mod": "core/publicIpPoolCapacity",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/corePublicIpPoolCapacity:CorePublicIpPoolCapacity": "CorePublicIpPoolCapacity"
+   "oci:core/publicIpPoolCapacity:PublicIpPoolCapacity": "PublicIpPoolCapacity"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreRemotePeeringConnection",
-  "fqn": "pulumi_oci",
+  "mod": "core/remotePeeringConnection",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreRemotePeeringConnection:CoreRemotePeeringConnection": "CoreRemotePeeringConnection"
+   "oci:core/remotePeeringConnection:RemotePeeringConnection": "RemotePeeringConnection"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreRouteTable",
-  "fqn": "pulumi_oci",
+  "mod": "core/routeTable",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreRouteTable:CoreRouteTable": "CoreRouteTable"
+   "oci:core/routeTable:RouteTable": "RouteTable"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreRouteTableAttachment",
-  "fqn": "pulumi_oci",
+  "mod": "core/routeTableAttachment",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreRouteTableAttachment:CoreRouteTableAttachment": "CoreRouteTableAttachment"
+   "oci:core/routeTableAttachment:RouteTableAttachment": "RouteTableAttachment"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreSecurityList",
-  "fqn": "pulumi_oci",
+  "mod": "core/securityList",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreSecurityList:CoreSecurityList": "CoreSecurityList"
+   "oci:core/securityList:SecurityList": "SecurityList"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreServiceGateway",
-  "fqn": "pulumi_oci",
+  "mod": "core/serviceGateway",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreServiceGateway:CoreServiceGateway": "CoreServiceGateway"
+   "oci:core/serviceGateway:ServiceGateway": "ServiceGateway"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreShapeManagement",
-  "fqn": "pulumi_oci",
+  "mod": "core/subnet",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreShapeManagement:CoreShapeManagement": "CoreShapeManagement"
+   "oci:core/subnet:Subnet": "Subnet"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreSubnet",
-  "fqn": "pulumi_oci",
+  "mod": "core/vcn",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreSubnet:CoreSubnet": "CoreSubnet"
+   "oci:core/vcn:Vcn": "Vcn"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreVcn",
-  "fqn": "pulumi_oci",
+  "mod": "core/virtualCircuit",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreVcn:CoreVcn": "CoreVcn"
+   "oci:core/virtualCircuit:VirtualCircuit": "VirtualCircuit"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreVirtualCircuit",
-  "fqn": "pulumi_oci",
+  "mod": "core/vlan",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreVirtualCircuit:CoreVirtualCircuit": "CoreVirtualCircuit"
+   "oci:core/vlan:Vlan": "Vlan"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreVirtualNetwork",
-  "fqn": "pulumi_oci",
+  "mod": "core/vnicAttachment",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreVirtualNetwork:CoreVirtualNetwork": "CoreVirtualNetwork"
+   "oci:core/vnicAttachment:VnicAttachment": "VnicAttachment"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreVlan",
-  "fqn": "pulumi_oci",
+  "mod": "core/volume",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreVlan:CoreVlan": "CoreVlan"
+   "oci:core/volume:Volume": "Volume"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreVnicAttachment",
-  "fqn": "pulumi_oci",
+  "mod": "core/volumeAttachment",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreVnicAttachment:CoreVnicAttachment": "CoreVnicAttachment"
+   "oci:core/volumeAttachment:VolumeAttachment": "VolumeAttachment"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreVolume",
-  "fqn": "pulumi_oci",
+  "mod": "core/volumeBackup",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreVolume:CoreVolume": "CoreVolume"
+   "oci:core/volumeBackup:VolumeBackup": "VolumeBackup"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreVolumeAttachment",
-  "fqn": "pulumi_oci",
+  "mod": "core/volumeBackupPolicy",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreVolumeAttachment:CoreVolumeAttachment": "CoreVolumeAttachment"
+   "oci:core/volumeBackupPolicy:VolumeBackupPolicy": "VolumeBackupPolicy"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreVolumeBackup",
-  "fqn": "pulumi_oci",
+  "mod": "core/volumeBackupPolicyAssignment",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreVolumeBackup:CoreVolumeBackup": "CoreVolumeBackup"
+   "oci:core/volumeBackupPolicyAssignment:VolumeBackupPolicyAssignment": "VolumeBackupPolicyAssignment"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreVolumeBackupPolicy",
-  "fqn": "pulumi_oci",
+  "mod": "core/volumeGroup",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreVolumeBackupPolicy:CoreVolumeBackupPolicy": "CoreVolumeBackupPolicy"
+   "oci:core/volumeGroup:VolumeGroup": "VolumeGroup"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreVolumeBackupPolicyAssignment",
-  "fqn": "pulumi_oci",
+  "mod": "core/volumeGroupBackup",
+  "fqn": "pulumi_oci.core",
   "classes": {
-   "oci:index/coreVolumeBackupPolicyAssignment:CoreVolumeBackupPolicyAssignment": "CoreVolumeBackupPolicyAssignment"
+   "oci:core/volumeGroupBackup:VolumeGroupBackup": "VolumeGroupBackup"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreVolumeGroup",
-  "fqn": "pulumi_oci",
+  "mod": "database/autonomousContainerDatabase",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/coreVolumeGroup:CoreVolumeGroup": "CoreVolumeGroup"
+   "oci:database/autonomousContainerDatabase:AutonomousContainerDatabase": "AutonomousContainerDatabase"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/coreVolumeGroupBackup",
-  "fqn": "pulumi_oci",
+  "mod": "database/autonomousContainerDatabaseDataguardAssociationOperation",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/coreVolumeGroupBackup:CoreVolumeGroupBackup": "CoreVolumeGroupBackup"
+   "oci:database/autonomousContainerDatabaseDataguardAssociationOperation:AutonomousContainerDatabaseDataguardAssociationOperation": "AutonomousContainerDatabaseDataguardAssociationOperation"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dataSafeDataSafeConfiguration",
-  "fqn": "pulumi_oci",
+  "mod": "database/autonomousDatabase",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/dataSafeDataSafeConfiguration:DataSafeDataSafeConfiguration": "DataSafeDataSafeConfiguration"
+   "oci:database/autonomousDatabase:AutonomousDatabase": "AutonomousDatabase"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dataSafeDataSafePrivateEndpoint",
-  "fqn": "pulumi_oci",
+  "mod": "database/autonomousDatabaseBackup",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/dataSafeDataSafePrivateEndpoint:DataSafeDataSafePrivateEndpoint": "DataSafeDataSafePrivateEndpoint"
+   "oci:database/autonomousDatabaseBackup:AutonomousDatabaseBackup": "AutonomousDatabaseBackup"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dataSafeOnPremConnector",
-  "fqn": "pulumi_oci",
+  "mod": "database/autonomousDatabaseInstanceWalletManagement",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/dataSafeOnPremConnector:DataSafeOnPremConnector": "DataSafeOnPremConnector"
+   "oci:database/autonomousDatabaseInstanceWalletManagement:AutonomousDatabaseInstanceWalletManagement": "AutonomousDatabaseInstanceWalletManagement"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dataSafeTargetDatabase",
-  "fqn": "pulumi_oci",
+  "mod": "database/autonomousDatabaseRegionalWalletManagement",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/dataSafeTargetDatabase:DataSafeTargetDatabase": "DataSafeTargetDatabase"
+   "oci:database/autonomousDatabaseRegionalWalletManagement:AutonomousDatabaseRegionalWalletManagement": "AutonomousDatabaseRegionalWalletManagement"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseAutonomousContainerDatabase",
-  "fqn": "pulumi_oci",
+  "mod": "database/autonomousDatabaseWallet",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseAutonomousContainerDatabase:DatabaseAutonomousContainerDatabase": "DatabaseAutonomousContainerDatabase"
+   "oci:database/autonomousDatabaseWallet:AutonomousDatabaseWallet": "AutonomousDatabaseWallet"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseAutonomousContainerDatabaseDataguardAssociationOperation",
-  "fqn": "pulumi_oci",
+  "mod": "database/autonomousExadataInfrastructure",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseAutonomousContainerDatabaseDataguardAssociationOperation:DatabaseAutonomousContainerDatabaseDataguardAssociationOperation": "DatabaseAutonomousContainerDatabaseDataguardAssociationOperation"
+   "oci:database/autonomousExadataInfrastructure:AutonomousExadataInfrastructure": "AutonomousExadataInfrastructure"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseAutonomousDatabase",
-  "fqn": "pulumi_oci",
+  "mod": "database/autonomousVmCluster",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseAutonomousDatabase:DatabaseAutonomousDatabase": "DatabaseAutonomousDatabase"
+   "oci:database/autonomousVmCluster:AutonomousVmCluster": "AutonomousVmCluster"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseAutonomousDatabaseBackup",
-  "fqn": "pulumi_oci",
+  "mod": "database/backup",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseAutonomousDatabaseBackup:DatabaseAutonomousDatabaseBackup": "DatabaseAutonomousDatabaseBackup"
+   "oci:database/backup:Backup": "Backup"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseAutonomousDatabaseInstanceWalletManagement",
-  "fqn": "pulumi_oci",
+  "mod": "database/backupDestination",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseAutonomousDatabaseInstanceWalletManagement:DatabaseAutonomousDatabaseInstanceWalletManagement": "DatabaseAutonomousDatabaseInstanceWalletManagement"
+   "oci:database/backupDestination:BackupDestination": "BackupDestination"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseAutonomousDatabaseRegionalWalletManagement",
-  "fqn": "pulumi_oci",
+  "mod": "database/cloudExadataInfrastructure",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseAutonomousDatabaseRegionalWalletManagement:DatabaseAutonomousDatabaseRegionalWalletManagement": "DatabaseAutonomousDatabaseRegionalWalletManagement"
+   "oci:database/cloudExadataInfrastructure:CloudExadataInfrastructure": "CloudExadataInfrastructure"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseAutonomousDatabaseWallet",
-  "fqn": "pulumi_oci",
+  "mod": "database/cloudVmCluster",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseAutonomousDatabaseWallet:DatabaseAutonomousDatabaseWallet": "DatabaseAutonomousDatabaseWallet"
+   "oci:database/cloudVmCluster:CloudVmCluster": "CloudVmCluster"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseAutonomousExadataInfrastructure",
-  "fqn": "pulumi_oci",
+  "mod": "database/dataGuardAssociation",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseAutonomousExadataInfrastructure:DatabaseAutonomousExadataInfrastructure": "DatabaseAutonomousExadataInfrastructure"
+   "oci:database/dataGuardAssociation:DataGuardAssociation": "DataGuardAssociation"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseAutonomousVmCluster",
-  "fqn": "pulumi_oci",
+  "mod": "database/database",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseAutonomousVmCluster:DatabaseAutonomousVmCluster": "DatabaseAutonomousVmCluster"
+   "oci:database/database:Database": "Database"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseBackup",
-  "fqn": "pulumi_oci",
+  "mod": "database/databaseSoftwareImage",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseBackup:DatabaseBackup": "DatabaseBackup"
+   "oci:database/databaseSoftwareImage:DatabaseSoftwareImage": "DatabaseSoftwareImage"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseBackupDestination",
-  "fqn": "pulumi_oci",
+  "mod": "database/databaseUpgrade",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseBackupDestination:DatabaseBackupDestination": "DatabaseBackupDestination"
+   "oci:database/databaseUpgrade:DatabaseUpgrade": "DatabaseUpgrade"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseCloudExadataInfrastructure",
-  "fqn": "pulumi_oci",
+  "mod": "database/dbHome",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseCloudExadataInfrastructure:DatabaseCloudExadataInfrastructure": "DatabaseCloudExadataInfrastructure"
+   "oci:database/dbHome:DbHome": "DbHome"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseCloudVmCluster",
-  "fqn": "pulumi_oci",
+  "mod": "database/dbNodeConsoleConnection",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseCloudVmCluster:DatabaseCloudVmCluster": "DatabaseCloudVmCluster"
+   "oci:database/dbNodeConsoleConnection:DbNodeConsoleConnection": "DbNodeConsoleConnection"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseDataGuardAssociation",
-  "fqn": "pulumi_oci",
+  "mod": "database/dbSystem",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseDataGuardAssociation:DatabaseDataGuardAssociation": "DatabaseDataGuardAssociation"
+   "oci:database/dbSystem:DbSystem": "DbSystem"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseDatabase",
-  "fqn": "pulumi_oci",
+  "mod": "database/exadataInfrastructure",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseDatabase:DatabaseDatabase": "DatabaseDatabase"
+   "oci:database/exadataInfrastructure:ExadataInfrastructure": "ExadataInfrastructure"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseDatabaseSoftwareImage",
-  "fqn": "pulumi_oci",
+  "mod": "database/exadataIormConfig",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseDatabaseSoftwareImage:DatabaseDatabaseSoftwareImage": "DatabaseDatabaseSoftwareImage"
+   "oci:database/exadataIormConfig:ExadataIormConfig": "ExadataIormConfig"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseDatabaseUpgrade",
-  "fqn": "pulumi_oci",
+  "mod": "database/externalContainerDatabase",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseDatabaseUpgrade:DatabaseDatabaseUpgrade": "DatabaseDatabaseUpgrade"
+   "oci:database/externalContainerDatabase:ExternalContainerDatabase": "ExternalContainerDatabase"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseDbHome",
-  "fqn": "pulumi_oci",
+  "mod": "database/externalContainerDatabaseManagement",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseDbHome:DatabaseDbHome": "DatabaseDbHome"
+   "oci:database/externalContainerDatabaseManagement:ExternalContainerDatabaseManagement": "ExternalContainerDatabaseManagement"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseDbNodeConsoleConnection",
-  "fqn": "pulumi_oci",
+  "mod": "database/externalDatabaseConnector",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseDbNodeConsoleConnection:DatabaseDbNodeConsoleConnection": "DatabaseDbNodeConsoleConnection"
+   "oci:database/externalDatabaseConnector:ExternalDatabaseConnector": "ExternalDatabaseConnector"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseDbSystem",
-  "fqn": "pulumi_oci",
+  "mod": "database/externalNonContainerDatabase",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseDbSystem:DatabaseDbSystem": "DatabaseDbSystem"
+   "oci:database/externalNonContainerDatabase:ExternalNonContainerDatabase": "ExternalNonContainerDatabase"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseExadataInfrastructure",
-  "fqn": "pulumi_oci",
+  "mod": "database/externalNonContainerDatabaseManagement",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseExadataInfrastructure:DatabaseExadataInfrastructure": "DatabaseExadataInfrastructure"
+   "oci:database/externalNonContainerDatabaseManagement:ExternalNonContainerDatabaseManagement": "ExternalNonContainerDatabaseManagement"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseExadataInfrastructureStorage",
-  "fqn": "pulumi_oci",
+  "mod": "database/externalNonContainerDatabaseOperationsInsightsManagement",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseExadataInfrastructureStorage:DatabaseExadataInfrastructureStorage": "DatabaseExadataInfrastructureStorage"
+   "oci:database/externalNonContainerDatabaseOperationsInsightsManagement:ExternalNonContainerDatabaseOperationsInsightsManagement": "ExternalNonContainerDatabaseOperationsInsightsManagement"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseExadataIormConfig",
-  "fqn": "pulumi_oci",
+  "mod": "database/externalPluggableDatabase",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseExadataIormConfig:DatabaseExadataIormConfig": "DatabaseExadataIormConfig"
+   "oci:database/externalPluggableDatabase:ExternalPluggableDatabase": "ExternalPluggableDatabase"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseExternalContainerDatabase",
-  "fqn": "pulumi_oci",
+  "mod": "database/externalPluggableDatabaseManagement",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseExternalContainerDatabase:DatabaseExternalContainerDatabase": "DatabaseExternalContainerDatabase"
+   "oci:database/externalPluggableDatabaseManagement:ExternalPluggableDatabaseManagement": "ExternalPluggableDatabaseManagement"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseExternalContainerDatabaseManagement",
-  "fqn": "pulumi_oci",
+  "mod": "database/externalPluggableDatabaseOperationsInsightsManagement",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseExternalContainerDatabaseManagement:DatabaseExternalContainerDatabaseManagement": "DatabaseExternalContainerDatabaseManagement"
+   "oci:database/externalPluggableDatabaseOperationsInsightsManagement:ExternalPluggableDatabaseOperationsInsightsManagement": "ExternalPluggableDatabaseOperationsInsightsManagement"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseExternalDatabaseConnector",
-  "fqn": "pulumi_oci",
+  "mod": "database/keyStore",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseExternalDatabaseConnector:DatabaseExternalDatabaseConnector": "DatabaseExternalDatabaseConnector"
+   "oci:database/keyStore:KeyStore": "KeyStore"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseExternalNonContainerDatabase",
-  "fqn": "pulumi_oci",
+  "mod": "database/maintenanceRun",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseExternalNonContainerDatabase:DatabaseExternalNonContainerDatabase": "DatabaseExternalNonContainerDatabase"
+   "oci:database/maintenanceRun:MaintenanceRun": "MaintenanceRun"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseExternalNonContainerDatabaseManagement",
-  "fqn": "pulumi_oci",
+  "mod": "database/migration",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseExternalNonContainerDatabaseManagement:DatabaseExternalNonContainerDatabaseManagement": "DatabaseExternalNonContainerDatabaseManagement"
+   "oci:database/migration:Migration": "Migration"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseExternalNonContainerDatabaseOperationsInsightsManagement",
-  "fqn": "pulumi_oci",
+  "mod": "database/pluggableDatabase",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseExternalNonContainerDatabaseOperationsInsightsManagement:DatabaseExternalNonContainerDatabaseOperationsInsightsManagement": "DatabaseExternalNonContainerDatabaseOperationsInsightsManagement"
+   "oci:database/pluggableDatabase:PluggableDatabase": "PluggableDatabase"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseExternalPluggableDatabase",
-  "fqn": "pulumi_oci",
+  "mod": "database/pluggableDatabasesLocalClone",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseExternalPluggableDatabase:DatabaseExternalPluggableDatabase": "DatabaseExternalPluggableDatabase"
+   "oci:database/pluggableDatabasesLocalClone:PluggableDatabasesLocalClone": "PluggableDatabasesLocalClone"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseExternalPluggableDatabaseManagement",
-  "fqn": "pulumi_oci",
+  "mod": "database/pluggableDatabasesRemoteClone",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseExternalPluggableDatabaseManagement:DatabaseExternalPluggableDatabaseManagement": "DatabaseExternalPluggableDatabaseManagement"
+   "oci:database/pluggableDatabasesRemoteClone:PluggableDatabasesRemoteClone": "PluggableDatabasesRemoteClone"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseExternalPluggableDatabaseOperationsInsightsManagement",
-  "fqn": "pulumi_oci",
+  "mod": "database/vmCluster",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseExternalPluggableDatabaseOperationsInsightsManagement:DatabaseExternalPluggableDatabaseOperationsInsightsManagement": "DatabaseExternalPluggableDatabaseOperationsInsightsManagement"
+   "oci:database/vmCluster:VmCluster": "VmCluster"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseKeyStore",
-  "fqn": "pulumi_oci",
+  "mod": "database/vmClusterNetwork",
+  "fqn": "pulumi_oci.database",
   "classes": {
-   "oci:index/databaseKeyStore:DatabaseKeyStore": "DatabaseKeyStore"
+   "oci:database/vmClusterNetwork:VmClusterNetwork": "VmClusterNetwork"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseMaintenanceRun",
-  "fqn": "pulumi_oci",
+  "mod": "databasemanagement/managedDatabaseGroup",
+  "fqn": "pulumi_oci.databasemanagement",
   "classes": {
-   "oci:index/databaseMaintenanceRun:DatabaseMaintenanceRun": "DatabaseMaintenanceRun"
+   "oci:databasemanagement/managedDatabaseGroup:ManagedDatabaseGroup": "ManagedDatabaseGroup"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseManagementManagedDatabaseGroup",
-  "fqn": "pulumi_oci",
+  "mod": "databasemanagement/managedDatabasesChangeDatabaseParameter",
+  "fqn": "pulumi_oci.databasemanagement",
   "classes": {
-   "oci:index/databaseManagementManagedDatabaseGroup:DatabaseManagementManagedDatabaseGroup": "DatabaseManagementManagedDatabaseGroup"
+   "oci:databasemanagement/managedDatabasesChangeDatabaseParameter:ManagedDatabasesChangeDatabaseParameter": "ManagedDatabasesChangeDatabaseParameter"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseManagementManagedDatabasesChangeDatabaseParameter",
-  "fqn": "pulumi_oci",
+  "mod": "databasemanagement/managedDatabasesResetDatabaseParameter",
+  "fqn": "pulumi_oci.databasemanagement",
   "classes": {
-   "oci:index/databaseManagementManagedDatabasesChangeDatabaseParameter:DatabaseManagementManagedDatabasesChangeDatabaseParameter": "DatabaseManagementManagedDatabasesChangeDatabaseParameter"
+   "oci:databasemanagement/managedDatabasesResetDatabaseParameter:ManagedDatabasesResetDatabaseParameter": "ManagedDatabasesResetDatabaseParameter"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseManagementManagedDatabasesResetDatabaseParameter",
-  "fqn": "pulumi_oci",
+  "mod": "databasemigration/agent",
+  "fqn": "pulumi_oci.databasemigration",
   "classes": {
-   "oci:index/databaseManagementManagedDatabasesResetDatabaseParameter:DatabaseManagementManagedDatabasesResetDatabaseParameter": "DatabaseManagementManagedDatabasesResetDatabaseParameter"
+   "oci:databasemigration/agent:Agent": "Agent"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseMigration",
-  "fqn": "pulumi_oci",
+  "mod": "databasemigration/connection",
+  "fqn": "pulumi_oci.databasemigration",
   "classes": {
-   "oci:index/databaseMigration:DatabaseMigration": "DatabaseMigration"
+   "oci:databasemigration/connection:Connection": "Connection"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseMigrationAgent",
-  "fqn": "pulumi_oci",
+  "mod": "databasemigration/job",
+  "fqn": "pulumi_oci.databasemigration",
   "classes": {
-   "oci:index/databaseMigrationAgent:DatabaseMigrationAgent": "DatabaseMigrationAgent"
+   "oci:databasemigration/job:Job": "Job"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseMigrationConnection",
-  "fqn": "pulumi_oci",
+  "mod": "databasemigration/migration",
+  "fqn": "pulumi_oci.databasemigration",
   "classes": {
-   "oci:index/databaseMigrationConnection:DatabaseMigrationConnection": "DatabaseMigrationConnection"
+   "oci:databasemigration/migration:Migration": "Migration"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseMigrationJob",
-  "fqn": "pulumi_oci",
+  "mod": "datacatalog/catalog",
+  "fqn": "pulumi_oci.datacatalog",
   "classes": {
-   "oci:index/databaseMigrationJob:DatabaseMigrationJob": "DatabaseMigrationJob"
+   "oci:datacatalog/catalog:Catalog": "Catalog"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseMigrationMigration",
-  "fqn": "pulumi_oci",
+  "mod": "datacatalog/catalogPrivateEndpoint",
+  "fqn": "pulumi_oci.datacatalog",
   "classes": {
-   "oci:index/databaseMigrationMigration:DatabaseMigrationMigration": "DatabaseMigrationMigration"
+   "oci:datacatalog/catalogPrivateEndpoint:CatalogPrivateEndpoint": "CatalogPrivateEndpoint"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databasePluggableDatabase",
-  "fqn": "pulumi_oci",
+  "mod": "datacatalog/connection",
+  "fqn": "pulumi_oci.datacatalog",
   "classes": {
-   "oci:index/databasePluggableDatabase:DatabasePluggableDatabase": "DatabasePluggableDatabase"
+   "oci:datacatalog/connection:Connection": "Connection"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databasePluggableDatabasesLocalClone",
-  "fqn": "pulumi_oci",
+  "mod": "datacatalog/dataAsset",
+  "fqn": "pulumi_oci.datacatalog",
   "classes": {
-   "oci:index/databasePluggableDatabasesLocalClone:DatabasePluggableDatabasesLocalClone": "DatabasePluggableDatabasesLocalClone"
+   "oci:datacatalog/dataAsset:DataAsset": "DataAsset"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databasePluggableDatabasesRemoteClone",
-  "fqn": "pulumi_oci",
+  "mod": "dataflow/application",
+  "fqn": "pulumi_oci.dataflow",
   "classes": {
-   "oci:index/databasePluggableDatabasesRemoteClone:DatabasePluggableDatabasesRemoteClone": "DatabasePluggableDatabasesRemoteClone"
+   "oci:dataflow/application:Application": "Application"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseVmCluster",
-  "fqn": "pulumi_oci",
+  "mod": "dataflow/invokeRun",
+  "fqn": "pulumi_oci.dataflow",
   "classes": {
-   "oci:index/databaseVmCluster:DatabaseVmCluster": "DatabaseVmCluster"
+   "oci:dataflow/invokeRun:InvokeRun": "InvokeRun"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/databaseVmClusterNetwork",
-  "fqn": "pulumi_oci",
+  "mod": "dataflow/privateEndpoint",
+  "fqn": "pulumi_oci.dataflow",
   "classes": {
-   "oci:index/databaseVmClusterNetwork:DatabaseVmClusterNetwork": "DatabaseVmClusterNetwork"
+   "oci:dataflow/privateEndpoint:PrivateEndpoint": "PrivateEndpoint"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/datacatalogCatalog",
-  "fqn": "pulumi_oci",
+  "mod": "dataintegration/workspace",
+  "fqn": "pulumi_oci.dataintegration",
   "classes": {
-   "oci:index/datacatalogCatalog:DatacatalogCatalog": "DatacatalogCatalog"
+   "oci:dataintegration/workspace:Workspace": "Workspace"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/datacatalogCatalogPrivateEndpoint",
-  "fqn": "pulumi_oci",
+  "mod": "datasafe/dataSafeConfiguration",
+  "fqn": "pulumi_oci.datasafe",
   "classes": {
-   "oci:index/datacatalogCatalogPrivateEndpoint:DatacatalogCatalogPrivateEndpoint": "DatacatalogCatalogPrivateEndpoint"
+   "oci:datasafe/dataSafeConfiguration:DataSafeConfiguration": "DataSafeConfiguration"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/datacatalogConnection",
-  "fqn": "pulumi_oci",
+  "mod": "datasafe/dataSafePrivateEndpoint",
+  "fqn": "pulumi_oci.datasafe",
   "classes": {
-   "oci:index/datacatalogConnection:DatacatalogConnection": "DatacatalogConnection"
+   "oci:datasafe/dataSafePrivateEndpoint:DataSafePrivateEndpoint": "DataSafePrivateEndpoint"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/datacatalogDataAsset",
-  "fqn": "pulumi_oci",
+  "mod": "datasafe/onPremConnector",
+  "fqn": "pulumi_oci.datasafe",
   "classes": {
-   "oci:index/datacatalogDataAsset:DatacatalogDataAsset": "DatacatalogDataAsset"
+   "oci:datasafe/onPremConnector:OnPremConnector": "OnPremConnector"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/datacatalogMetastore",
-  "fqn": "pulumi_oci",
+  "mod": "datasafe/targetDatabase",
+  "fqn": "pulumi_oci.datasafe",
   "classes": {
-   "oci:index/datacatalogMetastore:DatacatalogMetastore": "DatacatalogMetastore"
+   "oci:datasafe/targetDatabase:TargetDatabase": "TargetDatabase"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dataflowApplication",
-  "fqn": "pulumi_oci",
+  "mod": "datascience/model",
+  "fqn": "pulumi_oci.datascience",
   "classes": {
-   "oci:index/dataflowApplication:DataflowApplication": "DataflowApplication"
+   "oci:datascience/model:Model": "Model"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dataflowInvokeRun",
-  "fqn": "pulumi_oci",
+  "mod": "datascience/modelDeployment",
+  "fqn": "pulumi_oci.datascience",
   "classes": {
-   "oci:index/dataflowInvokeRun:DataflowInvokeRun": "DataflowInvokeRun"
+   "oci:datascience/modelDeployment:ModelDeployment": "ModelDeployment"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dataflowPrivateEndpoint",
-  "fqn": "pulumi_oci",
+  "mod": "datascience/modelProvenance",
+  "fqn": "pulumi_oci.datascience",
   "classes": {
-   "oci:index/dataflowPrivateEndpoint:DataflowPrivateEndpoint": "DataflowPrivateEndpoint"
+   "oci:datascience/modelProvenance:ModelProvenance": "ModelProvenance"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dataintegrationWorkspace",
-  "fqn": "pulumi_oci",
+  "mod": "datascience/notebookSession",
+  "fqn": "pulumi_oci.datascience",
   "classes": {
-   "oci:index/dataintegrationWorkspace:DataintegrationWorkspace": "DataintegrationWorkspace"
+   "oci:datascience/notebookSession:NotebookSession": "NotebookSession"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/datascienceModel",
-  "fqn": "pulumi_oci",
+  "mod": "datascience/project",
+  "fqn": "pulumi_oci.datascience",
   "classes": {
-   "oci:index/datascienceModel:DatascienceModel": "DatascienceModel"
+   "oci:datascience/project:Project": "Project"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/datascienceModelDeployment",
-  "fqn": "pulumi_oci",
+  "mod": "devops/deployArtifact",
+  "fqn": "pulumi_oci.devops",
   "classes": {
-   "oci:index/datascienceModelDeployment:DatascienceModelDeployment": "DatascienceModelDeployment"
+   "oci:devops/deployArtifact:DeployArtifact": "DeployArtifact"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/datascienceModelProvenance",
-  "fqn": "pulumi_oci",
+  "mod": "devops/deployEnvironment",
+  "fqn": "pulumi_oci.devops",
   "classes": {
-   "oci:index/datascienceModelProvenance:DatascienceModelProvenance": "DatascienceModelProvenance"
+   "oci:devops/deployEnvironment:DeployEnvironment": "DeployEnvironment"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/datascienceNotebookSession",
-  "fqn": "pulumi_oci",
+  "mod": "devops/deployPipeline",
+  "fqn": "pulumi_oci.devops",
   "classes": {
-   "oci:index/datascienceNotebookSession:DatascienceNotebookSession": "DatascienceNotebookSession"
+   "oci:devops/deployPipeline:DeployPipeline": "DeployPipeline"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/datascienceProject",
-  "fqn": "pulumi_oci",
+  "mod": "devops/deployStage",
+  "fqn": "pulumi_oci.devops",
   "classes": {
-   "oci:index/datascienceProject:DatascienceProject": "DatascienceProject"
+   "oci:devops/deployStage:DeployStage": "DeployStage"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/devopsDeployArtifact",
-  "fqn": "pulumi_oci",
+  "mod": "devops/deployment",
+  "fqn": "pulumi_oci.devops",
   "classes": {
-   "oci:index/devopsDeployArtifact:DevopsDeployArtifact": "DevopsDeployArtifact"
+   "oci:devops/deployment:Deployment": "Deployment"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/devopsDeployEnvironment",
-  "fqn": "pulumi_oci",
+  "mod": "devops/project",
+  "fqn": "pulumi_oci.devops",
   "classes": {
-   "oci:index/devopsDeployEnvironment:DevopsDeployEnvironment": "DevopsDeployEnvironment"
+   "oci:devops/project:Project": "Project"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/devopsDeployPipeline",
-  "fqn": "pulumi_oci",
+  "mod": "dns/record",
+  "fqn": "pulumi_oci.dns",
   "classes": {
-   "oci:index/devopsDeployPipeline:DevopsDeployPipeline": "DevopsDeployPipeline"
+   "oci:dns/record:Record": "Record"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/devopsDeployStage",
-  "fqn": "pulumi_oci",
+  "mod": "dns/resolver",
+  "fqn": "pulumi_oci.dns",
   "classes": {
-   "oci:index/devopsDeployStage:DevopsDeployStage": "DevopsDeployStage"
+   "oci:dns/resolver:Resolver": "Resolver"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/devopsDeployment",
-  "fqn": "pulumi_oci",
+  "mod": "dns/resolverEndpoint",
+  "fqn": "pulumi_oci.dns",
   "classes": {
-   "oci:index/devopsDeployment:DevopsDeployment": "DevopsDeployment"
+   "oci:dns/resolverEndpoint:ResolverEndpoint": "ResolverEndpoint"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/devopsProject",
-  "fqn": "pulumi_oci",
+  "mod": "dns/rrset",
+  "fqn": "pulumi_oci.dns",
   "classes": {
-   "oci:index/devopsProject:DevopsProject": "DevopsProject"
+   "oci:dns/rrset:Rrset": "Rrset"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dnsRecord",
-  "fqn": "pulumi_oci",
+  "mod": "dns/steeringPolicy",
+  "fqn": "pulumi_oci.dns",
   "classes": {
-   "oci:index/dnsRecord:DnsRecord": "DnsRecord"
+   "oci:dns/steeringPolicy:SteeringPolicy": "SteeringPolicy"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dnsResolver",
-  "fqn": "pulumi_oci",
+  "mod": "dns/steeringPolicyAttachment",
+  "fqn": "pulumi_oci.dns",
   "classes": {
-   "oci:index/dnsResolver:DnsResolver": "DnsResolver"
+   "oci:dns/steeringPolicyAttachment:SteeringPolicyAttachment": "SteeringPolicyAttachment"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dnsResolverEndpoint",
-  "fqn": "pulumi_oci",
+  "mod": "dns/tsigKey",
+  "fqn": "pulumi_oci.dns",
   "classes": {
-   "oci:index/dnsResolverEndpoint:DnsResolverEndpoint": "DnsResolverEndpoint"
+   "oci:dns/tsigKey:TsigKey": "TsigKey"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dnsRrset",
-  "fqn": "pulumi_oci",
+  "mod": "dns/view",
+  "fqn": "pulumi_oci.dns",
   "classes": {
-   "oci:index/dnsRrset:DnsRrset": "DnsRrset"
+   "oci:dns/view:View": "View"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dnsSteeringPolicy",
-  "fqn": "pulumi_oci",
+  "mod": "dns/zone",
+  "fqn": "pulumi_oci.dns",
   "classes": {
-   "oci:index/dnsSteeringPolicy:DnsSteeringPolicy": "DnsSteeringPolicy"
+   "oci:dns/zone:Zone": "Zone"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dnsSteeringPolicyAttachment",
-  "fqn": "pulumi_oci",
+  "mod": "email/dkim",
+  "fqn": "pulumi_oci.email",
   "classes": {
-   "oci:index/dnsSteeringPolicyAttachment:DnsSteeringPolicyAttachment": "DnsSteeringPolicyAttachment"
+   "oci:email/dkim:Dkim": "Dkim"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dnsTsigKey",
-  "fqn": "pulumi_oci",
+  "mod": "email/emailDomain",
+  "fqn": "pulumi_oci.email",
   "classes": {
-   "oci:index/dnsTsigKey:DnsTsigKey": "DnsTsigKey"
+   "oci:email/emailDomain:EmailDomain": "EmailDomain"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dnsView",
-  "fqn": "pulumi_oci",
+  "mod": "email/sender",
+  "fqn": "pulumi_oci.email",
   "classes": {
-   "oci:index/dnsView:DnsView": "DnsView"
+   "oci:email/sender:Sender": "Sender"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/dnsZone",
-  "fqn": "pulumi_oci",
+  "mod": "email/suppression",
+  "fqn": "pulumi_oci.email",
   "classes": {
-   "oci:index/dnsZone:DnsZone": "DnsZone"
+   "oci:email/suppression:Suppression": "Suppression"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/emailDkim",
-  "fqn": "pulumi_oci",
+  "mod": "events/rule",
+  "fqn": "pulumi_oci.events",
   "classes": {
-   "oci:index/emailDkim:EmailDkim": "EmailDkim"
+   "oci:events/rule:Rule": "Rule"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/emailEmailDomain",
-  "fqn": "pulumi_oci",
+  "mod": "filestorage/export",
+  "fqn": "pulumi_oci.filestorage",
   "classes": {
-   "oci:index/emailEmailDomain:EmailEmailDomain": "EmailEmailDomain"
+   "oci:filestorage/export:Export": "Export"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/emailSender",
-  "fqn": "pulumi_oci",
+  "mod": "filestorage/exportSet",
+  "fqn": "pulumi_oci.filestorage",
   "classes": {
-   "oci:index/emailSender:EmailSender": "EmailSender"
+   "oci:filestorage/exportSet:ExportSet": "ExportSet"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/emailSuppression",
-  "fqn": "pulumi_oci",
+  "mod": "filestorage/fileSystem",
+  "fqn": "pulumi_oci.filestorage",
   "classes": {
-   "oci:index/emailSuppression:EmailSuppression": "EmailSuppression"
+   "oci:filestorage/fileSystem:FileSystem": "FileSystem"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/eventsRule",
-  "fqn": "pulumi_oci",
+  "mod": "filestorage/mountTarget",
+  "fqn": "pulumi_oci.filestorage",
   "classes": {
-   "oci:index/eventsRule:EventsRule": "EventsRule"
+   "oci:filestorage/mountTarget:MountTarget": "MountTarget"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/fileStorageExport",
-  "fqn": "pulumi_oci",
+  "mod": "filestorage/snapshot",
+  "fqn": "pulumi_oci.filestorage",
   "classes": {
-   "oci:index/fileStorageExport:FileStorageExport": "FileStorageExport"
+   "oci:filestorage/snapshot:Snapshot": "Snapshot"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/fileStorageExportSet",
-  "fqn": "pulumi_oci",
+  "mod": "functions/application",
+  "fqn": "pulumi_oci.functions",
   "classes": {
-   "oci:index/fileStorageExportSet:FileStorageExportSet": "FileStorageExportSet"
+   "oci:functions/application:Application": "Application"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/fileStorageFileSystem",
-  "fqn": "pulumi_oci",
+  "mod": "functions/function",
+  "fqn": "pulumi_oci.functions",
   "classes": {
-   "oci:index/fileStorageFileSystem:FileStorageFileSystem": "FileStorageFileSystem"
+   "oci:functions/function:Function": "Function"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/fileStorageMountTarget",
-  "fqn": "pulumi_oci",
+  "mod": "functions/invokeFunction",
+  "fqn": "pulumi_oci.functions",
   "classes": {
-   "oci:index/fileStorageMountTarget:FileStorageMountTarget": "FileStorageMountTarget"
+   "oci:functions/invokeFunction:InvokeFunction": "InvokeFunction"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/fileStorageSnapshot",
-  "fqn": "pulumi_oci",
+  "mod": "goldengate/databaseRegistration",
+  "fqn": "pulumi_oci.goldengate",
   "classes": {
-   "oci:index/fileStorageSnapshot:FileStorageSnapshot": "FileStorageSnapshot"
+   "oci:goldengate/databaseRegistration:DatabaseRegistration": "DatabaseRegistration"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/functionsApplication",
-  "fqn": "pulumi_oci",
+  "mod": "goldengate/deployment",
+  "fqn": "pulumi_oci.goldengate",
   "classes": {
-   "oci:index/functionsApplication:FunctionsApplication": "FunctionsApplication"
+   "oci:goldengate/deployment:Deployment": "Deployment"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/functionsFunction",
-  "fqn": "pulumi_oci",
+  "mod": "goldengate/deploymentBackup",
+  "fqn": "pulumi_oci.goldengate",
   "classes": {
-   "oci:index/functionsFunction:FunctionsFunction": "FunctionsFunction"
+   "oci:goldengate/deploymentBackup:DeploymentBackup": "DeploymentBackup"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/functionsInvokeFunction",
-  "fqn": "pulumi_oci",
+  "mod": "healthchecks/httpMonitor",
+  "fqn": "pulumi_oci.healthchecks",
   "classes": {
-   "oci:index/functionsInvokeFunction:FunctionsInvokeFunction": "FunctionsInvokeFunction"
+   "oci:healthchecks/httpMonitor:HttpMonitor": "HttpMonitor"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/genericArtifactsContentArtifactByPath",
-  "fqn": "pulumi_oci",
+  "mod": "healthchecks/httpProbe",
+  "fqn": "pulumi_oci.healthchecks",
   "classes": {
-   "oci:index/genericArtifactsContentArtifactByPath:GenericArtifactsContentArtifactByPath": "GenericArtifactsContentArtifactByPath"
+   "oci:healthchecks/httpProbe:HttpProbe": "HttpProbe"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/goldenGateDatabaseRegistration",
-  "fqn": "pulumi_oci",
+  "mod": "healthchecks/pingMonitor",
+  "fqn": "pulumi_oci.healthchecks",
   "classes": {
-   "oci:index/goldenGateDatabaseRegistration:GoldenGateDatabaseRegistration": "GoldenGateDatabaseRegistration"
+   "oci:healthchecks/pingMonitor:PingMonitor": "PingMonitor"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/goldenGateDeployment",
-  "fqn": "pulumi_oci",
+  "mod": "healthchecks/pingProbe",
+  "fqn": "pulumi_oci.healthchecks",
   "classes": {
-   "oci:index/goldenGateDeployment:GoldenGateDeployment": "GoldenGateDeployment"
+   "oci:healthchecks/pingProbe:PingProbe": "PingProbe"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/goldenGateDeploymentBackup",
-  "fqn": "pulumi_oci",
+  "mod": "identity/apiKey",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/goldenGateDeploymentBackup:GoldenGateDeploymentBackup": "GoldenGateDeploymentBackup"
+   "oci:identity/apiKey:ApiKey": "ApiKey"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/healthChecksHttpMonitor",
-  "fqn": "pulumi_oci",
+  "mod": "identity/authToken",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/healthChecksHttpMonitor:HealthChecksHttpMonitor": "HealthChecksHttpMonitor"
+   "oci:identity/authToken:AuthToken": "AuthToken"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/healthChecksHttpProbe",
-  "fqn": "pulumi_oci",
+  "mod": "identity/authenticationPolicy",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/healthChecksHttpProbe:HealthChecksHttpProbe": "HealthChecksHttpProbe"
+   "oci:identity/authenticationPolicy:AuthenticationPolicy": "AuthenticationPolicy"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/healthChecksPingMonitor",
-  "fqn": "pulumi_oci",
+  "mod": "identity/compartment",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/healthChecksPingMonitor:HealthChecksPingMonitor": "HealthChecksPingMonitor"
+   "oci:identity/compartment:Compartment": "Compartment"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/healthChecksPingProbe",
-  "fqn": "pulumi_oci",
+  "mod": "identity/customerSecretKey",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/healthChecksPingProbe:HealthChecksPingProbe": "HealthChecksPingProbe"
+   "oci:identity/customerSecretKey:CustomerSecretKey": "CustomerSecretKey"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityApiKey",
-  "fqn": "pulumi_oci",
+  "mod": "identity/dynamicGroup",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/identityApiKey:IdentityApiKey": "IdentityApiKey"
+   "oci:identity/dynamicGroup:DynamicGroup": "DynamicGroup"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityAuthToken",
-  "fqn": "pulumi_oci",
+  "mod": "identity/group",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/identityAuthToken:IdentityAuthToken": "IdentityAuthToken"
+   "oci:identity/group:Group": "Group"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityAuthenticationPolicy",
-  "fqn": "pulumi_oci",
+  "mod": "identity/identityProvider",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/identityAuthenticationPolicy:IdentityAuthenticationPolicy": "IdentityAuthenticationPolicy"
+   "oci:identity/identityProvider:IdentityProvider": "IdentityProvider"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityCompartment",
-  "fqn": "pulumi_oci",
+  "mod": "identity/idpGroupMapping",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/identityCompartment:IdentityCompartment": "IdentityCompartment"
+   "oci:identity/idpGroupMapping:IdpGroupMapping": "IdpGroupMapping"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityCustomerSecretKey",
-  "fqn": "pulumi_oci",
+  "mod": "identity/networkSource",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/identityCustomerSecretKey:IdentityCustomerSecretKey": "IdentityCustomerSecretKey"
+   "oci:identity/networkSource:NetworkSource": "NetworkSource"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityDynamicGroup",
-  "fqn": "pulumi_oci",
+  "mod": "identity/policy",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/identityDynamicGroup:IdentityDynamicGroup": "IdentityDynamicGroup"
+   "oci:identity/policy:Policy": "Policy"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityGroup",
-  "fqn": "pulumi_oci",
+  "mod": "identity/smtpCredential",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/identityGroup:IdentityGroup": "IdentityGroup"
+   "oci:identity/smtpCredential:SmtpCredential": "SmtpCredential"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityIdentityProvider",
-  "fqn": "pulumi_oci",
+  "mod": "identity/swiftPassword",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/identityIdentityProvider:IdentityIdentityProvider": "IdentityIdentityProvider"
+   "oci:identity/swiftPassword:SwiftPassword": "SwiftPassword"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityIdpGroupMapping",
-  "fqn": "pulumi_oci",
+  "mod": "identity/tag",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/identityIdpGroupMapping:IdentityIdpGroupMapping": "IdentityIdpGroupMapping"
+   "oci:identity/tag:Tag": "Tag"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityNetworkSource",
-  "fqn": "pulumi_oci",
+  "mod": "identity/tagDefault",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/identityNetworkSource:IdentityNetworkSource": "IdentityNetworkSource"
+   "oci:identity/tagDefault:TagDefault": "TagDefault"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityPolicy",
-  "fqn": "pulumi_oci",
+  "mod": "identity/tagNamespace",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/identityPolicy:IdentityPolicy": "IdentityPolicy"
+   "oci:identity/tagNamespace:TagNamespace": "TagNamespace"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identitySmtpCredential",
-  "fqn": "pulumi_oci",
+  "mod": "identity/uiPassword",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/identitySmtpCredential:IdentitySmtpCredential": "IdentitySmtpCredential"
+   "oci:identity/uiPassword:UiPassword": "UiPassword"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identitySwiftPassword",
-  "fqn": "pulumi_oci",
+  "mod": "identity/user",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/identitySwiftPassword:IdentitySwiftPassword": "IdentitySwiftPassword"
+   "oci:identity/user:User": "User"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityTag",
-  "fqn": "pulumi_oci",
+  "mod": "identity/userCapabilitiesManagement",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/identityTag:IdentityTag": "IdentityTag"
+   "oci:identity/userCapabilitiesManagement:UserCapabilitiesManagement": "UserCapabilitiesManagement"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityTagDefault",
-  "fqn": "pulumi_oci",
+  "mod": "identity/userGroupMembership",
+  "fqn": "pulumi_oci.identity",
   "classes": {
-   "oci:index/identityTagDefault:IdentityTagDefault": "IdentityTagDefault"
+   "oci:identity/userGroupMembership:UserGroupMembership": "UserGroupMembership"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityTagNamespace",
-  "fqn": "pulumi_oci",
+  "mod": "integration/integrationInstance",
+  "fqn": "pulumi_oci.integration",
   "classes": {
-   "oci:index/identityTagNamespace:IdentityTagNamespace": "IdentityTagNamespace"
+   "oci:integration/integrationInstance:IntegrationInstance": "IntegrationInstance"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityUiPassword",
-  "fqn": "pulumi_oci",
+  "mod": "jms/fleet",
+  "fqn": "pulumi_oci.jms",
   "classes": {
-   "oci:index/identityUiPassword:IdentityUiPassword": "IdentityUiPassword"
+   "oci:jms/fleet:Fleet": "Fleet"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityUser",
-  "fqn": "pulumi_oci",
+  "mod": "kms/encryptedData",
+  "fqn": "pulumi_oci.kms",
   "classes": {
-   "oci:index/identityUser:IdentityUser": "IdentityUser"
+   "oci:kms/encryptedData:EncryptedData": "EncryptedData"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityUserCapabilitiesManagement",
-  "fqn": "pulumi_oci",
+  "mod": "kms/generatedKey",
+  "fqn": "pulumi_oci.kms",
   "classes": {
-   "oci:index/identityUserCapabilitiesManagement:IdentityUserCapabilitiesManagement": "IdentityUserCapabilitiesManagement"
+   "oci:kms/generatedKey:GeneratedKey": "GeneratedKey"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/identityUserGroupMembership",
-  "fqn": "pulumi_oci",
+  "mod": "kms/key",
+  "fqn": "pulumi_oci.kms",
   "classes": {
-   "oci:index/identityUserGroupMembership:IdentityUserGroupMembership": "IdentityUserGroupMembership"
+   "oci:kms/key:Key": "Key"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/integrationIntegrationInstance",
-  "fqn": "pulumi_oci",
+  "mod": "kms/keyVersion",
+  "fqn": "pulumi_oci.kms",
   "classes": {
-   "oci:index/integrationIntegrationInstance:IntegrationIntegrationInstance": "IntegrationIntegrationInstance"
+   "oci:kms/keyVersion:KeyVersion": "KeyVersion"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/jmsFleet",
-  "fqn": "pulumi_oci",
+  "mod": "kms/sign",
+  "fqn": "pulumi_oci.kms",
   "classes": {
-   "oci:index/jmsFleet:JmsFleet": "JmsFleet"
+   "oci:kms/sign:Sign": "Sign"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/kmsEncryptedData",
-  "fqn": "pulumi_oci",
+  "mod": "kms/vault",
+  "fqn": "pulumi_oci.kms",
   "classes": {
-   "oci:index/kmsEncryptedData:KmsEncryptedData": "KmsEncryptedData"
+   "oci:kms/vault:Vault": "Vault"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/kmsGeneratedKey",
-  "fqn": "pulumi_oci",
+  "mod": "kms/verify",
+  "fqn": "pulumi_oci.kms",
   "classes": {
-   "oci:index/kmsGeneratedKey:KmsGeneratedKey": "KmsGeneratedKey"
+   "oci:kms/verify:Verify": "Verify"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/kmsKey",
-  "fqn": "pulumi_oci",
+  "mod": "limits/quota",
+  "fqn": "pulumi_oci.limits",
   "classes": {
-   "oci:index/kmsKey:KmsKey": "KmsKey"
+   "oci:limits/quota:Quota": "Quota"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/kmsKeyVersion",
-  "fqn": "pulumi_oci",
+  "mod": "loadbalancer/backend",
+  "fqn": "pulumi_oci.loadbalancer",
   "classes": {
-   "oci:index/kmsKeyVersion:KmsKeyVersion": "KmsKeyVersion"
+   "oci:loadbalancer/backend:Backend": "Backend"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/kmsSign",
-  "fqn": "pulumi_oci",
+  "mod": "loadbalancer/backendSet",
+  "fqn": "pulumi_oci.loadbalancer",
   "classes": {
-   "oci:index/kmsSign:KmsSign": "KmsSign"
+   "oci:loadbalancer/backendSet:BackendSet": "BackendSet"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/kmsVault",
-  "fqn": "pulumi_oci",
+  "mod": "loadbalancer/certificate",
+  "fqn": "pulumi_oci.loadbalancer",
   "classes": {
-   "oci:index/kmsVault:KmsVault": "KmsVault"
+   "oci:loadbalancer/certificate:Certificate": "Certificate"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/kmsVaultReplication",
-  "fqn": "pulumi_oci",
+  "mod": "loadbalancer/hostname",
+  "fqn": "pulumi_oci.loadbalancer",
   "classes": {
-   "oci:index/kmsVaultReplication:KmsVaultReplication": "KmsVaultReplication"
+   "oci:loadbalancer/hostname:Hostname": "Hostname"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/kmsVerify",
-  "fqn": "pulumi_oci",
+  "mod": "loadbalancer/listener",
+  "fqn": "pulumi_oci.loadbalancer",
   "classes": {
-   "oci:index/kmsVerify:KmsVerify": "KmsVerify"
+   "oci:loadbalancer/listener:Listener": "Listener"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/limitsQuota",
-  "fqn": "pulumi_oci",
+  "mod": "loadbalancer/loadBalancer",
+  "fqn": "pulumi_oci.loadbalancer",
   "classes": {
-   "oci:index/limitsQuota:LimitsQuota": "LimitsQuota"
+   "oci:loadbalancer/loadBalancer:LoadBalancer": "LoadBalancer"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/loadBalancer",
-  "fqn": "pulumi_oci",
+  "mod": "loadbalancer/loadBalancerRoutingPolicy",
+  "fqn": "pulumi_oci.loadbalancer",
   "classes": {
-   "oci:index/loadBalancer:LoadBalancer": "LoadBalancer"
+   "oci:loadbalancer/loadBalancerRoutingPolicy:LoadBalancerRoutingPolicy": "LoadBalancerRoutingPolicy"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/loadBalancerBackend",
-  "fqn": "pulumi_oci",
+  "mod": "loadbalancer/pathRouteSet",
+  "fqn": "pulumi_oci.loadbalancer",
   "classes": {
-   "oci:index/loadBalancerBackend:LoadBalancerBackend": "LoadBalancerBackend"
+   "oci:loadbalancer/pathRouteSet:PathRouteSet": "PathRouteSet"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/loadBalancerBackendSet",
-  "fqn": "pulumi_oci",
+  "mod": "loadbalancer/ruleSet",
+  "fqn": "pulumi_oci.loadbalancer",
   "classes": {
-   "oci:index/loadBalancerBackendSet:LoadBalancerBackendSet": "LoadBalancerBackendSet"
+   "oci:loadbalancer/ruleSet:RuleSet": "RuleSet"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/loadBalancerCertificate",
-  "fqn": "pulumi_oci",
+  "mod": "loadbalancer/sslCipherSuite",
+  "fqn": "pulumi_oci.loadbalancer",
   "classes": {
-   "oci:index/loadBalancerCertificate:LoadBalancerCertificate": "LoadBalancerCertificate"
+   "oci:loadbalancer/sslCipherSuite:SslCipherSuite": "SslCipherSuite"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/loadBalancerHostname",
-  "fqn": "pulumi_oci",
+  "mod": "loganalytics/logAnalyticsEntity",
+  "fqn": "pulumi_oci.loganalytics",
   "classes": {
-   "oci:index/loadBalancerHostname:LoadBalancerHostname": "LoadBalancerHostname"
+   "oci:loganalytics/logAnalyticsEntity:LogAnalyticsEntity": "LogAnalyticsEntity"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/loadBalancerListener",
-  "fqn": "pulumi_oci",
+  "mod": "loganalytics/logAnalyticsLogGroup",
+  "fqn": "pulumi_oci.loganalytics",
   "classes": {
-   "oci:index/loadBalancerListener:LoadBalancerListener": "LoadBalancerListener"
+   "oci:loganalytics/logAnalyticsLogGroup:LogAnalyticsLogGroup": "LogAnalyticsLogGroup"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/loadBalancerLoadBalancer",
-  "fqn": "pulumi_oci",
+  "mod": "loganalytics/logAnalyticsObjectCollectionRule",
+  "fqn": "pulumi_oci.loganalytics",
   "classes": {
-   "oci:index/loadBalancerLoadBalancer:LoadBalancerLoadBalancer": "LoadBalancerLoadBalancer"
+   "oci:loganalytics/logAnalyticsObjectCollectionRule:LogAnalyticsObjectCollectionRule": "LogAnalyticsObjectCollectionRule"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/loadBalancerLoadBalancerRoutingPolicy",
-  "fqn": "pulumi_oci",
+  "mod": "loganalytics/namespace",
+  "fqn": "pulumi_oci.loganalytics",
   "classes": {
-   "oci:index/loadBalancerLoadBalancerRoutingPolicy:LoadBalancerLoadBalancerRoutingPolicy": "LoadBalancerLoadBalancerRoutingPolicy"
+   "oci:loganalytics/namespace:Namespace": "Namespace"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/loadBalancerPathRouteSet",
-  "fqn": "pulumi_oci",
+  "mod": "logging/log",
+  "fqn": "pulumi_oci.logging",
   "classes": {
-   "oci:index/loadBalancerPathRouteSet:LoadBalancerPathRouteSet": "LoadBalancerPathRouteSet"
+   "oci:logging/log:Log": "Log"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/loadBalancerRuleSet",
-  "fqn": "pulumi_oci",
+  "mod": "logging/logGroup",
+  "fqn": "pulumi_oci.logging",
   "classes": {
-   "oci:index/loadBalancerRuleSet:LoadBalancerRuleSet": "LoadBalancerRuleSet"
+   "oci:logging/logGroup:LogGroup": "LogGroup"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/loadBalancerSslCipherSuite",
-  "fqn": "pulumi_oci",
+  "mod": "logging/logSavedSearch",
+  "fqn": "pulumi_oci.logging",
   "classes": {
-   "oci:index/loadBalancerSslCipherSuite:LoadBalancerSslCipherSuite": "LoadBalancerSslCipherSuite"
+   "oci:logging/logSavedSearch:LogSavedSearch": "LogSavedSearch"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/logAnalyticsLogAnalyticsEntity",
-  "fqn": "pulumi_oci",
+  "mod": "logging/unifiedAgentConfiguration",
+  "fqn": "pulumi_oci.logging",
   "classes": {
-   "oci:index/logAnalyticsLogAnalyticsEntity:LogAnalyticsLogAnalyticsEntity": "LogAnalyticsLogAnalyticsEntity"
+   "oci:logging/unifiedAgentConfiguration:UnifiedAgentConfiguration": "UnifiedAgentConfiguration"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/logAnalyticsLogAnalyticsLogGroup",
-  "fqn": "pulumi_oci",
+  "mod": "managementagent/managementAgent",
+  "fqn": "pulumi_oci.managementagent",
   "classes": {
-   "oci:index/logAnalyticsLogAnalyticsLogGroup:LogAnalyticsLogAnalyticsLogGroup": "LogAnalyticsLogAnalyticsLogGroup"
+   "oci:managementagent/managementAgent:ManagementAgent": "ManagementAgent"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/logAnalyticsLogAnalyticsObjectCollectionRule",
-  "fqn": "pulumi_oci",
+  "mod": "managementagent/managementAgentInstallKey",
+  "fqn": "pulumi_oci.managementagent",
   "classes": {
-   "oci:index/logAnalyticsLogAnalyticsObjectCollectionRule:LogAnalyticsLogAnalyticsObjectCollectionRule": "LogAnalyticsLogAnalyticsObjectCollectionRule"
+   "oci:managementagent/managementAgentInstallKey:ManagementAgentInstallKey": "ManagementAgentInstallKey"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/logAnalyticsNamespace",
-  "fqn": "pulumi_oci",
+  "mod": "managementdashboard/managementDashboardsImport",
+  "fqn": "pulumi_oci.managementdashboard",
   "classes": {
-   "oci:index/logAnalyticsNamespace:LogAnalyticsNamespace": "LogAnalyticsNamespace"
+   "oci:managementdashboard/managementDashboardsImport:ManagementDashboardsImport": "ManagementDashboardsImport"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/loggingLog",
-  "fqn": "pulumi_oci",
+  "mod": "marketplace/acceptedAgreement",
+  "fqn": "pulumi_oci.marketplace",
   "classes": {
-   "oci:index/loggingLog:LoggingLog": "LoggingLog"
+   "oci:marketplace/acceptedAgreement:AcceptedAgreement": "AcceptedAgreement"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/loggingLogGroup",
-  "fqn": "pulumi_oci",
+  "mod": "marketplace/publication",
+  "fqn": "pulumi_oci.marketplace",
   "classes": {
-   "oci:index/loggingLogGroup:LoggingLogGroup": "LoggingLogGroup"
+   "oci:marketplace/publication:Publication": "Publication"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/loggingLogSavedSearch",
-  "fqn": "pulumi_oci",
+  "mod": "meteringcomputation/customTable",
+  "fqn": "pulumi_oci.meteringcomputation",
   "classes": {
-   "oci:index/loggingLogSavedSearch:LoggingLogSavedSearch": "LoggingLogSavedSearch"
+   "oci:meteringcomputation/customTable:CustomTable": "CustomTable"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/loggingUnifiedAgentConfiguration",
-  "fqn": "pulumi_oci",
+  "mod": "meteringcomputation/query",
+  "fqn": "pulumi_oci.meteringcomputation",
   "classes": {
-   "oci:index/loggingUnifiedAgentConfiguration:LoggingUnifiedAgentConfiguration": "LoggingUnifiedAgentConfiguration"
+   "oci:meteringcomputation/query:Query": "Query"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/managementAgentManagementAgent",
-  "fqn": "pulumi_oci",
+  "mod": "meteringcomputation/usage",
+  "fqn": "pulumi_oci.meteringcomputation",
   "classes": {
-   "oci:index/managementAgentManagementAgent:ManagementAgentManagementAgent": "ManagementAgentManagementAgent"
+   "oci:meteringcomputation/usage:Usage": "Usage"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/managementAgentManagementAgentInstallKey",
-  "fqn": "pulumi_oci",
+  "mod": "monitoring/alarm",
+  "fqn": "pulumi_oci.monitoring",
   "classes": {
-   "oci:index/managementAgentManagementAgentInstallKey:ManagementAgentManagementAgentInstallKey": "ManagementAgentManagementAgentInstallKey"
+   "oci:monitoring/alarm:Alarm": "Alarm"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/managementDashboardManagementDashboardsImport",
-  "fqn": "pulumi_oci",
+  "mod": "mysql/analyticsCluster",
+  "fqn": "pulumi_oci.mysql",
   "classes": {
-   "oci:index/managementDashboardManagementDashboardsImport:ManagementDashboardManagementDashboardsImport": "ManagementDashboardManagementDashboardsImport"
+   "oci:mysql/analyticsCluster:AnalyticsCluster": "AnalyticsCluster"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/marketplaceAcceptedAgreement",
-  "fqn": "pulumi_oci",
+  "mod": "mysql/channel",
+  "fqn": "pulumi_oci.mysql",
   "classes": {
-   "oci:index/marketplaceAcceptedAgreement:MarketplaceAcceptedAgreement": "MarketplaceAcceptedAgreement"
+   "oci:mysql/channel:Channel": "Channel"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/marketplaceListingPackageAgreement",
-  "fqn": "pulumi_oci",
+  "mod": "mysql/heatWaveCluster",
+  "fqn": "pulumi_oci.mysql",
   "classes": {
-   "oci:index/marketplaceListingPackageAgreement:MarketplaceListingPackageAgreement": "MarketplaceListingPackageAgreement"
+   "oci:mysql/heatWaveCluster:HeatWaveCluster": "HeatWaveCluster"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/marketplacePublication",
-  "fqn": "pulumi_oci",
+  "mod": "mysql/mysqlBackup",
+  "fqn": "pulumi_oci.mysql",
   "classes": {
-   "oci:index/marketplacePublication:MarketplacePublication": "MarketplacePublication"
+   "oci:mysql/mysqlBackup:MysqlBackup": "MysqlBackup"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/meteringComputationCustomTable",
-  "fqn": "pulumi_oci",
+  "mod": "mysql/mysqlDbSystem",
+  "fqn": "pulumi_oci.mysql",
   "classes": {
-   "oci:index/meteringComputationCustomTable:MeteringComputationCustomTable": "MeteringComputationCustomTable"
+   "oci:mysql/mysqlDbSystem:MysqlDbSystem": "MysqlDbSystem"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/meteringComputationQuery",
-  "fqn": "pulumi_oci",
+  "mod": "networkloadbalancer/backend",
+  "fqn": "pulumi_oci.networkloadbalancer",
   "classes": {
-   "oci:index/meteringComputationQuery:MeteringComputationQuery": "MeteringComputationQuery"
+   "oci:networkloadbalancer/backend:Backend": "Backend"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/meteringComputationUsage",
-  "fqn": "pulumi_oci",
+  "mod": "networkloadbalancer/backendSet",
+  "fqn": "pulumi_oci.networkloadbalancer",
   "classes": {
-   "oci:index/meteringComputationUsage:MeteringComputationUsage": "MeteringComputationUsage"
+   "oci:networkloadbalancer/backendSet:BackendSet": "BackendSet"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/monitoringAlarm",
-  "fqn": "pulumi_oci",
+  "mod": "networkloadbalancer/listener",
+  "fqn": "pulumi_oci.networkloadbalancer",
   "classes": {
-   "oci:index/monitoringAlarm:MonitoringAlarm": "MonitoringAlarm"
+   "oci:networkloadbalancer/listener:Listener": "Listener"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/mysqlAnalyticsCluster",
-  "fqn": "pulumi_oci",
+  "mod": "networkloadbalancer/networkLoadBalancer",
+  "fqn": "pulumi_oci.networkloadbalancer",
   "classes": {
-   "oci:index/mysqlAnalyticsCluster:MysqlAnalyticsCluster": "MysqlAnalyticsCluster"
+   "oci:networkloadbalancer/networkLoadBalancer:NetworkLoadBalancer": "NetworkLoadBalancer"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/mysqlChannel",
-  "fqn": "pulumi_oci",
+  "mod": "nosql/index",
+  "fqn": "pulumi_oci.nosql",
   "classes": {
-   "oci:index/mysqlChannel:MysqlChannel": "MysqlChannel"
+   "oci:nosql/index:Index": "Index"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/mysqlHeatWaveCluster",
-  "fqn": "pulumi_oci",
+  "mod": "nosql/table",
+  "fqn": "pulumi_oci.nosql",
   "classes": {
-   "oci:index/mysqlHeatWaveCluster:MysqlHeatWaveCluster": "MysqlHeatWaveCluster"
+   "oci:nosql/table:Table": "Table"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/mysqlMysqlBackup",
-  "fqn": "pulumi_oci",
+  "mod": "objectstorage/objectstorageBucket",
+  "fqn": "pulumi_oci.objectstorage",
   "classes": {
-   "oci:index/mysqlMysqlBackup:MysqlMysqlBackup": "MysqlMysqlBackup"
+   "oci:objectstorage/objectstorageBucket:ObjectstorageBucket": "ObjectstorageBucket"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/mysqlMysqlDbSystem",
-  "fqn": "pulumi_oci",
+  "mod": "objectstorage/objectstorageObject",
+  "fqn": "pulumi_oci.objectstorage",
   "classes": {
-   "oci:index/mysqlMysqlDbSystem:MysqlMysqlDbSystem": "MysqlMysqlDbSystem"
+   "oci:objectstorage/objectstorageObject:ObjectstorageObject": "ObjectstorageObject"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/networkLoadBalancerBackend",
-  "fqn": "pulumi_oci",
+  "mod": "objectstorage/objectstorageObjectLifecyclePolicy",
+  "fqn": "pulumi_oci.objectstorage",
   "classes": {
-   "oci:index/networkLoadBalancerBackend:NetworkLoadBalancerBackend": "NetworkLoadBalancerBackend"
+   "oci:objectstorage/objectstorageObjectLifecyclePolicy:ObjectstorageObjectLifecyclePolicy": "ObjectstorageObjectLifecyclePolicy"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/networkLoadBalancerBackendSet",
-  "fqn": "pulumi_oci",
+  "mod": "objectstorage/objectstoragePreauthrequest",
+  "fqn": "pulumi_oci.objectstorage",
   "classes": {
-   "oci:index/networkLoadBalancerBackendSet:NetworkLoadBalancerBackendSet": "NetworkLoadBalancerBackendSet"
+   "oci:objectstorage/objectstoragePreauthrequest:ObjectstoragePreauthrequest": "ObjectstoragePreauthrequest"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/networkLoadBalancerListener",
-  "fqn": "pulumi_oci",
+  "mod": "objectstorage/objectstorageReplicationPolicy",
+  "fqn": "pulumi_oci.objectstorage",
   "classes": {
-   "oci:index/networkLoadBalancerListener:NetworkLoadBalancerListener": "NetworkLoadBalancerListener"
+   "oci:objectstorage/objectstorageReplicationPolicy:ObjectstorageReplicationPolicy": "ObjectstorageReplicationPolicy"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/networkLoadBalancerNetworkLoadBalancer",
-  "fqn": "pulumi_oci",
+  "mod": "oce/oceInstance",
+  "fqn": "pulumi_oci.oce",
   "classes": {
-   "oci:index/networkLoadBalancerNetworkLoadBalancer:NetworkLoadBalancerNetworkLoadBalancer": "NetworkLoadBalancerNetworkLoadBalancer"
+   "oci:oce/oceInstance:OceInstance": "OceInstance"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/nosqlIndex",
-  "fqn": "pulumi_oci",
+  "mod": "ocvp/esxiHost",
+  "fqn": "pulumi_oci.ocvp",
   "classes": {
-   "oci:index/nosqlIndex:NosqlIndex": "NosqlIndex"
+   "oci:ocvp/esxiHost:EsxiHost": "EsxiHost"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/nosqlTable",
-  "fqn": "pulumi_oci",
+  "mod": "ocvp/sddc",
+  "fqn": "pulumi_oci.ocvp",
   "classes": {
-   "oci:index/nosqlTable:NosqlTable": "NosqlTable"
+   "oci:ocvp/sddc:Sddc": "Sddc"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/objectstorageBucket",
-  "fqn": "pulumi_oci",
+  "mod": "oda/odaInstance",
+  "fqn": "pulumi_oci.oda",
   "classes": {
-   "oci:index/objectstorageBucket:ObjectstorageBucket": "ObjectstorageBucket"
+   "oci:oda/odaInstance:OdaInstance": "OdaInstance"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/objectstorageNamespaceMetadata",
-  "fqn": "pulumi_oci",
+  "mod": "ons/notificationTopic",
+  "fqn": "pulumi_oci.ons",
   "classes": {
-   "oci:index/objectstorageNamespaceMetadata:ObjectstorageNamespaceMetadata": "ObjectstorageNamespaceMetadata"
+   "oci:ons/notificationTopic:NotificationTopic": "NotificationTopic"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/objectstorageObject",
-  "fqn": "pulumi_oci",
+  "mod": "ons/subscription",
+  "fqn": "pulumi_oci.ons",
   "classes": {
-   "oci:index/objectstorageObject:ObjectstorageObject": "ObjectstorageObject"
+   "oci:ons/subscription:Subscription": "Subscription"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/objectstorageObjectLifecyclePolicy",
-  "fqn": "pulumi_oci",
+  "mod": "opsi/databaseInsight",
+  "fqn": "pulumi_oci.opsi",
   "classes": {
-   "oci:index/objectstorageObjectLifecyclePolicy:ObjectstorageObjectLifecyclePolicy": "ObjectstorageObjectLifecyclePolicy"
+   "oci:opsi/databaseInsight:DatabaseInsight": "DatabaseInsight"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/objectstoragePreauthrequest",
-  "fqn": "pulumi_oci",
+  "mod": "opsi/enterpriseManagerBridge",
+  "fqn": "pulumi_oci.opsi",
   "classes": {
-   "oci:index/objectstoragePreauthrequest:ObjectstoragePreauthrequest": "ObjectstoragePreauthrequest"
+   "oci:opsi/enterpriseManagerBridge:EnterpriseManagerBridge": "EnterpriseManagerBridge"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/objectstorageReplicationPolicy",
-  "fqn": "pulumi_oci",
+  "mod": "opsi/hostInsight",
+  "fqn": "pulumi_oci.opsi",
   "classes": {
-   "oci:index/objectstorageReplicationPolicy:ObjectstorageReplicationPolicy": "ObjectstorageReplicationPolicy"
+   "oci:opsi/hostInsight:HostInsight": "HostInsight"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/oceOceInstance",
-  "fqn": "pulumi_oci",
+  "mod": "optimizer/enrollmentStatus",
+  "fqn": "pulumi_oci.optimizer",
   "classes": {
-   "oci:index/oceOceInstance:OceOceInstance": "OceOceInstance"
+   "oci:optimizer/enrollmentStatus:EnrollmentStatus": "EnrollmentStatus"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/ocvpEsxiHost",
-  "fqn": "pulumi_oci",
+  "mod": "optimizer/profile",
+  "fqn": "pulumi_oci.optimizer",
   "classes": {
-   "oci:index/ocvpEsxiHost:OcvpEsxiHost": "OcvpEsxiHost"
+   "oci:optimizer/profile:Profile": "Profile"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/ocvpSddc",
-  "fqn": "pulumi_oci",
+  "mod": "optimizer/recommendation",
+  "fqn": "pulumi_oci.optimizer",
   "classes": {
-   "oci:index/ocvpSddc:OcvpSddc": "OcvpSddc"
+   "oci:optimizer/recommendation:Recommendation": "Recommendation"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/odaOdaInstance",
-  "fqn": "pulumi_oci",
+  "mod": "optimizer/resourceAction",
+  "fqn": "pulumi_oci.optimizer",
   "classes": {
-   "oci:index/odaOdaInstance:OdaOdaInstance": "OdaOdaInstance"
+   "oci:optimizer/resourceAction:ResourceAction": "ResourceAction"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/onsNotificationTopic",
-  "fqn": "pulumi_oci",
+  "mod": "osmanagement/managedInstanceGroup",
+  "fqn": "pulumi_oci.osmanagement",
   "classes": {
-   "oci:index/onsNotificationTopic:OnsNotificationTopic": "OnsNotificationTopic"
+   "oci:osmanagement/managedInstanceGroup:ManagedInstanceGroup": "ManagedInstanceGroup"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/onsSubscription",
-  "fqn": "pulumi_oci",
+  "mod": "osmanagement/managedInstanceManagement",
+  "fqn": "pulumi_oci.osmanagement",
   "classes": {
-   "oci:index/onsSubscription:OnsSubscription": "OnsSubscription"
+   "oci:osmanagement/managedInstanceManagement:ManagedInstanceManagement": "ManagedInstanceManagement"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/opsiDatabaseInsight",
-  "fqn": "pulumi_oci",
+  "mod": "osmanagement/softwareSource",
+  "fqn": "pulumi_oci.osmanagement",
   "classes": {
-   "oci:index/opsiDatabaseInsight:OpsiDatabaseInsight": "OpsiDatabaseInsight"
+   "oci:osmanagement/softwareSource:SoftwareSource": "SoftwareSource"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/opsiEnterpriseManagerBridge",
-  "fqn": "pulumi_oci",
+  "mod": "sch/serviceConnector",
+  "fqn": "pulumi_oci.sch",
   "classes": {
-   "oci:index/opsiEnterpriseManagerBridge:OpsiEnterpriseManagerBridge": "OpsiEnterpriseManagerBridge"
+   "oci:sch/serviceConnector:ServiceConnector": "ServiceConnector"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/opsiHostInsight",
-  "fqn": "pulumi_oci",
+  "mod": "servicecatalog/privateApplication",
+  "fqn": "pulumi_oci.servicecatalog",
   "classes": {
-   "oci:index/opsiHostInsight:OpsiHostInsight": "OpsiHostInsight"
+   "oci:servicecatalog/privateApplication:PrivateApplication": "PrivateApplication"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/optimizerEnrollmentStatus",
-  "fqn": "pulumi_oci",
+  "mod": "servicecatalog/serviceCatalog",
+  "fqn": "pulumi_oci.servicecatalog",
   "classes": {
-   "oci:index/optimizerEnrollmentStatus:OptimizerEnrollmentStatus": "OptimizerEnrollmentStatus"
+   "oci:servicecatalog/serviceCatalog:ServiceCatalog": "ServiceCatalog"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/optimizerProfile",
-  "fqn": "pulumi_oci",
+  "mod": "servicecatalog/serviceCatalogAssociation",
+  "fqn": "pulumi_oci.servicecatalog",
   "classes": {
-   "oci:index/optimizerProfile:OptimizerProfile": "OptimizerProfile"
+   "oci:servicecatalog/serviceCatalogAssociation:ServiceCatalogAssociation": "ServiceCatalogAssociation"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/optimizerRecommendation",
-  "fqn": "pulumi_oci",
+  "mod": "streaming/connectHarness",
+  "fqn": "pulumi_oci.streaming",
   "classes": {
-   "oci:index/optimizerRecommendation:OptimizerRecommendation": "OptimizerRecommendation"
+   "oci:streaming/connectHarness:ConnectHarness": "ConnectHarness"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/optimizerResourceAction",
-  "fqn": "pulumi_oci",
+  "mod": "streaming/stream",
+  "fqn": "pulumi_oci.streaming",
   "classes": {
-   "oci:index/optimizerResourceAction:OptimizerResourceAction": "OptimizerResourceAction"
+   "oci:streaming/stream:Stream": "Stream"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/osmanagementManagedInstanceGroup",
-  "fqn": "pulumi_oci",
+  "mod": "streaming/streamPool",
+  "fqn": "pulumi_oci.streaming",
   "classes": {
-   "oci:index/osmanagementManagedInstanceGroup:OsmanagementManagedInstanceGroup": "OsmanagementManagedInstanceGroup"
+   "oci:streaming/streamPool:StreamPool": "StreamPool"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/osmanagementManagedInstanceManagement",
-  "fqn": "pulumi_oci",
+  "mod": "vulnerabilityscanning/containerScanRecipe",
+  "fqn": "pulumi_oci.vulnerabilityscanning",
   "classes": {
-   "oci:index/osmanagementManagedInstanceManagement:OsmanagementManagedInstanceManagement": "OsmanagementManagedInstanceManagement"
+   "oci:vulnerabilityscanning/containerScanRecipe:ContainerScanRecipe": "ContainerScanRecipe"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/osmanagementSoftwareSource",
-  "fqn": "pulumi_oci",
+  "mod": "vulnerabilityscanning/containerScanTarget",
+  "fqn": "pulumi_oci.vulnerabilityscanning",
   "classes": {
-   "oci:index/osmanagementSoftwareSource:OsmanagementSoftwareSource": "OsmanagementSoftwareSource"
+   "oci:vulnerabilityscanning/containerScanTarget:ContainerScanTarget": "ContainerScanTarget"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/schServiceConnector",
-  "fqn": "pulumi_oci",
+  "mod": "vulnerabilityscanning/hostScanRecipe",
+  "fqn": "pulumi_oci.vulnerabilityscanning",
   "classes": {
-   "oci:index/schServiceConnector:SchServiceConnector": "SchServiceConnector"
+   "oci:vulnerabilityscanning/hostScanRecipe:HostScanRecipe": "HostScanRecipe"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/serviceCatalogPrivateApplication",
-  "fqn": "pulumi_oci",
+  "mod": "vulnerabilityscanning/hostScanTarget",
+  "fqn": "pulumi_oci.vulnerabilityscanning",
   "classes": {
-   "oci:index/serviceCatalogPrivateApplication:ServiceCatalogPrivateApplication": "ServiceCatalogPrivateApplication"
+   "oci:vulnerabilityscanning/hostScanTarget:HostScanTarget": "HostScanTarget"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/serviceCatalogServiceCatalog",
-  "fqn": "pulumi_oci",
+  "mod": "waas/addressList",
+  "fqn": "pulumi_oci.waas",
   "classes": {
-   "oci:index/serviceCatalogServiceCatalog:ServiceCatalogServiceCatalog": "ServiceCatalogServiceCatalog"
+   "oci:waas/addressList:AddressList": "AddressList"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/serviceCatalogServiceCatalogAssociation",
-  "fqn": "pulumi_oci",
+  "mod": "waas/certificate",
+  "fqn": "pulumi_oci.waas",
   "classes": {
-   "oci:index/serviceCatalogServiceCatalogAssociation:ServiceCatalogServiceCatalogAssociation": "ServiceCatalogServiceCatalogAssociation"
+   "oci:waas/certificate:Certificate": "Certificate"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/streamingConnectHarness",
-  "fqn": "pulumi_oci",
+  "mod": "waas/customProtectionRule",
+  "fqn": "pulumi_oci.waas",
   "classes": {
-   "oci:index/streamingConnectHarness:StreamingConnectHarness": "StreamingConnectHarness"
+   "oci:waas/customProtectionRule:CustomProtectionRule": "CustomProtectionRule"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/streamingStream",
-  "fqn": "pulumi_oci",
+  "mod": "waas/httpRedirect",
+  "fqn": "pulumi_oci.waas",
   "classes": {
-   "oci:index/streamingStream:StreamingStream": "StreamingStream"
+   "oci:waas/httpRedirect:HttpRedirect": "HttpRedirect"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/streamingStreamPool",
-  "fqn": "pulumi_oci",
+  "mod": "waas/protectionRule",
+  "fqn": "pulumi_oci.waas",
   "classes": {
-   "oci:index/streamingStreamPool:StreamingStreamPool": "StreamingStreamPool"
+   "oci:waas/protectionRule:ProtectionRule": "ProtectionRule"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/vulnerabilityScanningHostScanRecipe",
-  "fqn": "pulumi_oci",
+  "mod": "waas/purgeCache",
+  "fqn": "pulumi_oci.waas",
   "classes": {
-   "oci:index/vulnerabilityScanningHostScanRecipe:VulnerabilityScanningHostScanRecipe": "VulnerabilityScanningHostScanRecipe"
+   "oci:waas/purgeCache:PurgeCache": "PurgeCache"
   }
  },
  {
   "pkg": "oci",
-  "mod": "index/vulnerabilityScanningHostScanTarget",
-  "fqn": "pulumi_oci",
+  "mod": "waas/waasPolicy",
+  "fqn": "pulumi_oci.waas",
   "classes": {
-   "oci:index/vulnerabilityScanningHostScanTarget:VulnerabilityScanningHostScanTarget": "VulnerabilityScanningHostScanTarget"
-  }
- },
- {
-  "pkg": "oci",
-  "mod": "index/waasAddressList",
-  "fqn": "pulumi_oci",
-  "classes": {
-   "oci:index/waasAddressList:WaasAddressList": "WaasAddressList"
-  }
- },
- {
-  "pkg": "oci",
-  "mod": "index/waasCertificate",
-  "fqn": "pulumi_oci",
-  "classes": {
-   "oci:index/waasCertificate:WaasCertificate": "WaasCertificate"
-  }
- },
- {
-  "pkg": "oci",
-  "mod": "index/waasCustomProtectionRule",
-  "fqn": "pulumi_oci",
-  "classes": {
-   "oci:index/waasCustomProtectionRule:WaasCustomProtectionRule": "WaasCustomProtectionRule"
-  }
- },
- {
-  "pkg": "oci",
-  "mod": "index/waasHttpRedirect",
-  "fqn": "pulumi_oci",
-  "classes": {
-   "oci:index/waasHttpRedirect:WaasHttpRedirect": "WaasHttpRedirect"
-  }
- },
- {
-  "pkg": "oci",
-  "mod": "index/waasProtectionRule",
-  "fqn": "pulumi_oci",
-  "classes": {
-   "oci:index/waasProtectionRule:WaasProtectionRule": "WaasProtectionRule"
-  }
- },
- {
-  "pkg": "oci",
-  "mod": "index/waasPurgeCache",
-  "fqn": "pulumi_oci",
-  "classes": {
-   "oci:index/waasPurgeCache:WaasPurgeCache": "WaasPurgeCache"
-  }
- },
- {
-  "pkg": "oci",
-  "mod": "index/waasWaasPolicy",
-  "fqn": "pulumi_oci",
-  "classes": {
-   "oci:index/waasWaasPolicy:WaasWaasPolicy": "WaasWaasPolicy"
+   "oci:waas/waasPolicy:WaasPolicy": "WaasPolicy"
   }
  }
 ]
