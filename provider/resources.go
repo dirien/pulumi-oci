@@ -166,7 +166,7 @@ func Provider() tfbridge.ProviderInfo {
 	prov := tfbridge.ProviderInfo{
 		P:                    p,
 		Name:                 "oci",
-		Description:          "A Pulumi package for creating and managing oci cloud resources.",
+		Description:          "A Pulumi package for creating and managing Oracle Cloud Infrastructure (OCI) cloud resources.",
 		Keywords:             []string{"pulumi", "oci"},
 		License:              "Apache-2.0",
 		Homepage:             "https://pulumi.io",
