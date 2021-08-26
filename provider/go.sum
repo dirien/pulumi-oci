@@ -642,8 +642,8 @@ github.com/opentracing/basictracer-go v1.0.0 h1:YyUAhaEfjoWXclZVJ9sGoNct7j4TVk7l
 github.com/opentracing/basictracer-go v1.0.0/go.mod h1:QfBfYuafItcjQuMwinw9GhYKwFXS9KnPs5lxoYwgW74=
 github.com/opentracing/opentracing-go v1.1.0 h1:pWlfV3Bxv7k65HYwkikxat0+s3pV4bsqf19k25Ur8rU=
 github.com/opentracing/opentracing-go v1.1.0/go.mod h1:UkNAQd3GIcIGf0SeVgPpRdFStlNbqXla1AfSYxPUl2o=
-github.com/oracle/oci-go-sdk/v45 v45.2.0 h1:vCPoQlE+DOrM2heJn66rvPU6fbsc/0Cxtzs2jnFut6U=
-github.com/oracle/oci-go-sdk/v45 v45.2.0/go.mod h1:ZM6LGiRO5TPQJxTlrXbcHMbClE775wnGD5U/EerCsRw=
+github.com/oracle/oci-go-sdk/v46 v46.0.0 h1:6XrQIV10+8WjqfyWUa3gwyPApGanNY/shmp8vcWAWYU=
+github.com/oracle/oci-go-sdk/v46 v46.0.0/go.mod h1:DwFVvDNhpY+iZ2bD2ITEqENhO6/iBRttbJky49HRH6A=
 github.com/pascaldekloe/goe v0.1.0/go.mod h1:lzWF7FIEvWOWxwDKqyGYQf6ZUaNfKdP144TG7ZOy1lc=
 github.com/pelletier/go-buffruneio v0.2.0/go.mod h1:JkE26KsDizTr40EUHkXVtNPvgGtbSNq5BcowyYOWdKo=
 github.com/pelletier/go-toml v1.2.0/go.mod h1:5z9KED0ma1S8pY6P1sdut58dfprrGBbd/94hg7ilaic=
@@ -749,8 +749,8 @@ github.com/terraform-providers/terraform-provider-archive v1.3.0 h1:8WzDXMwTdTd4
 github.com/terraform-providers/terraform-provider-archive v1.3.0/go.mod h1:7oAwNW55F65KauS++/XmAnrXhLfQRTYt549eYs4zU0w=
 github.com/terraform-providers/terraform-provider-http v1.2.0 h1:pOP/SNlLjB18CydtTJJwzkZGkHYX3LWzIoQpYQuBdyw=
 github.com/terraform-providers/terraform-provider-http v1.2.0/go.mod h1:2Iot921OkLVSZr8FbIkvRN84ZV3w+oFKb7RlmPTQQAQ=
-github.com/terraform-providers/terraform-provider-oci v1.0.19-0.20210811184455-b51ee3e6fa80 h1:yc/gLAU1/HXkiia/iOBp1oedkC0atWujeaBrmH/akCA=
-github.com/terraform-providers/terraform-provider-oci v1.0.19-0.20210811184455-b51ee3e6fa80/go.mod h1:OI7mlu0ajbObYN4YlqZwF4yaE59w2GwUdgRqoMsOFEk=
+github.com/terraform-providers/terraform-provider-oci v1.0.19-0.20210818181613-9e1231b9b453 h1:8DGA5Gt85EZyV7j40WTjMnU87wrBI8/3UqIe9RhHU5s=
+github.com/terraform-providers/terraform-provider-oci v1.0.19-0.20210818181613-9e1231b9b453/go.mod h1:9TVIc3zdqBSJs5e72g25RAZiqPzGUrNt70dnJ+9ds+8=
 github.com/texttheater/golang-levenshtein v0.0.0-20191208221605-eb6844b05fc6 h1:9VTskZOIRf2vKF3UL8TuWElry5pgUpV1tFSe/e/0m/E=
 github.com/texttheater/golang-levenshtein v0.0.0-20191208221605-eb6844b05fc6/go.mod h1:XDKHRm5ThF8YJjx001LtgelzsoaEcvnA7lVWz9EeX3g=
 github.com/tmc/grpc-websocket-proxy v0.0.0-20190109142713-0ad062ec5ee5/go.mod h1:ncp9v5uamzpCO7NfCPTXjqaC+bZgJeR0sMTm6dMHP7U=
